@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="css/style copy.css">
+
+    <style>
+        img{width: 100%;}
+        .tag{
+            background: #FDF6D9;
+            padding: 1.1111vw 4.4444vw;
+            border-radius: 27.5000vw;
+            display: inline-block;
+            margin-bottom: 2.7778vw;
+            font-size: 4.7222vw;
+
+        }
+        .visual{position: relative;}
+        .content_area{
+            padding: 0 5.5556vw;
+            margin-bottom: 8.3333vw;
+            font-size: 4.4444vw;
+        }
+        .content_area:last-of-type{margin-bottom: 0;}
+        .gray{
+            color: #999;
+            font-size: 3.6111vw;
+        }
+        .box{
+            border-radius: 3.3333vw;
+            background:linear-gradient( 90deg, #F5F5F5 50%, #eee 50% );
+            padding: 4.4444vw 11.1111vw;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            font-size: 3.8889vw;
+            height: 26.6667vw;
+            align-items: center;
+            margin-bottom: 2.7778vw;
+        }
+        
+        .box_tag{
+            margin-bottom: 1.1111vw;
+            text-align: center;
+        }
+
+        .triangle{
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            border-top: 13.3333vw solid transparent;
+            border-left: 4.4444vw solid #F5F5F5;
+            border-bottom: 13.3333vw solid transparent;
+            top: 0;
+            left: 44.5vw;
+        }
+        .text_area{
+            margin-bottom: 1.1111vw;
+        }
+        table{border-top: 0.2778vw solid #ADADAD; border-bottom: 0.2778vw solid #E0E0E0; font-size: 3.6111vw;}
+        table th{background: #F5F5F5; color: #666; width: 22.2222vw; height: 16.6667vw; text-align: center; line-height: 16.6667vw; vertical-align: middle; border-right: 0.2778vw solid #e0e0e0;}
+        table td{color: #666; width: 19.4444vw; vertical-align: middle; border-right: 0.2778vw solid #e0e0e0;}
+        table td:nth-child(2){text-align: center;}
+        table td:last-child{width: 47.2222vw; padding: 2.7778vw 3.8889vw 2.7778vw 7vw; border: none;}
+        .step_wrap{
+            display: flex;
+            margin-top: 3.3333vw;
+        }
+        .step{
+            display: inline-block;
+            font-size: 2.7778vw;
+            border: 0.2778vw solid #333;
+            border-radius: 27.7778vw;
+            margin-right: 2.7778vw;
+            height: 5.8333vw;
+            max-width: 14.4444vw;
+            width: 100%;
+            text-align: center;
+            line-height: 5.8333vw;
+        }
+        .mb0{margin-bottom: 0;}
+        .step_text{font-size: 4.4444vw;}
+        .dot{position: relative; margin-top: 1.6667vw; font-size: 3.6111vw; padding-left: 5.2778vw;}
+        .dot::before{display: block; content: ''; width: 0.8333vw; height: 0.8333vw; background: #333; position: absolute; top: 22%; left: 3%; border-radius: 50%;}
+        .dot:last-child:before{top: 40%;}
+        .btn_meta{
+            background: #fff;
+            color: #000;
+            text-decoration: none;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 63.3333vw;
+            width: 100%;
+            font-size: 3.8889vw;
+            height: 11.1111vw;
+            line-height: 11.1111vw;
+            top: 71.5%;
+            display: block;
+            text-align: center;
+            border-radius: 2.7778vw;
+        }
+        .mb20{
+            margin-bottom: 5.5556vw;
+        }
+        .sub_tab{
+            display: flex;
+    justify-content: space-between;
+    width: 91.1111vw;
+    border-radius: 2.2222vw;
+    background: #f1f1f1;
+    margin: 0 auto;
+    align-items: center;
+    margin-bottom: 5.5556vw;
+        }
+        .sub_tab li {
+            max-width: 22.7778vw;
+    width: 100%;
+    text-align: center;
+    font-size: 3.8889vw;
+    color: #999;
+    height: 10.5556vw;
+    line-height: 10.5556vw;
+        }
+
+        .sub_tab li.sub_tab_list_on{
+            background: #fff;
+    border-radius: 2.2222vw;
+    border: 0.2778vw solid #E9E9E9;
+    color: #333;
+        }
+
+        .swiper-slide{
+            width: 88.8889vw;
+            margin: 0 auto;
+        }
+        .swiper-text{
+            text-align: center;
+            margin-top: 2.7778vw;
+            font-size: 4.4444vw;
+            font-weight: bold;
+        }
+        .swiper-pagination{
+
+        }
+        .swiper-pagination-bullet{
+            width: 1.6667vw;
+            height: 1.6667vw;
+            background: #B6B7B8;
+        }
+
+        .swiper-pagination-bullet-active{
+            background: #2C363B;
+            width: 3.3333vw;
+        }
+
+        .swiper{
+            display: none;
+            position: relative;
+        }
+        .swiper_show{
+            display: block;
+        }
+        .decoration{
+            width: 11.6667vw;
+            position: absolute;
+            bottom: 3%;
+            right: 10%;
+        }
+        .decoration img{
+            filter:drop-shadow(0 0.5556vw 2.7778vw 0 rgba(0, 0, 0, 0.2)) 
+        }
+
+        .swiper-img img{
+            box-shadow: 0 1.1111vw 5.5556vw 0 rgba(0, 0, 0, 0.3);
+        }
+        .FAQ_wrap{text-align: center; margin-bottom: 5.5556vw;}
+        .FAQ_wrap .FAQ_tag{background: #0054C4; color: #fff; font-size: 4.7222vw;display: inline-block; padding: 1.1111vw 4.4444vw; border-radius: 27.5vw;}
+        .FAQ_wrap .FAQ_text{font-size: 7.2222vw; margin-top: 2.7778vw;}
+        .accordion{}
+        .accordion li{padding: 5.5556vw; border-radius: 2.7778vw; background: #fff; overflow: hidden; transition: max-height 0.2s ease-in-out;}
+        .accordion li.accordion_on{max-height: 100%;}
+        .accordion li.accordion_off{max-height: 22.2222vw;}
+        .accordion .title{display: flex; justify-content: space-between; align-items: center;}
+        .arrow{width: 4.4444vw;}
+        .icon_q{font-size: 3.8889vw; color: #999;}
+        .accordion li .title_text{font-size: 4.4444vw; margin: 0 2.7778vw; text-align: left;}
+        .stroke{width: 100%; height: 0.2778vw; margin: 4.4444vw 0; background: #F0F0F0;}
+        .desc{font-size: 3.8889vw; color: #666; margin-bottom: 4.4444vw;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+
+        <!-- tab영역 -->
+        <div class="tab_wrap">
+            <div class="fade"></div>
+            <ul class="tab">    
+                <li class="tab_list mw_Title">대회소개</li>
+                <li class="tab_list mw_Title">수상작 갤러리</li>
+                <li class="tab_list mw_Title">자주묻는질문</li>
+            </ul>       
+        </div>
+        <!-- /tab영역 -->
+
+        <!-- content영역 -->
+        <div class="content_wrap">       
+            <div class="content_list show">
+                <div class="visual">
+                    <img src="img/body01.png" alt="">
+                </div>
+                <div class="content_area">
+                    <div class="tag fb">주제</div>
+                    <div class="text_area">내가 모은 용돈으로 햇던 뿌듯한 일 또는 용돈을 모아 이루고 싶은 꿈을 그려주세요!</div>
+                    <div class="gray">※ 8절지, 그림도구 자유</div>
+                </div>
+                <div class="content_area">
+                    <div class="tag fb">참가 대상</div>
+                    <div class="text_area">당사 미성년 자녀 계좌 보유 고객 누구나</div>
+                    <div class="gray">※ 대회부문 : 유치부, 초등 저학년, 초등 고학년</div>
+                </div>
+                <div class="content_area">
+                    <div class="tag fb">대회 일정</div>
+                    <div class="box">
+                        <div class="left">
+                            <div class="triangle"></div>
+                            <div class="box_tag">작품 접수</div>
+                            <div class="box_text">24.04.05(금) ~<br>
+                                24.05.05(일) </div>
+                        </div>
+                        <div class="right">
+                            <div class="box_tag">수상자 발표</div>
+                            <div class="box_text">24.05 이내<br>
+                                발표 예정</div>
+                        </div>
+                    </div>
+                    <div class="gray">※ 2024.05.05(일) 24:59 시 작품 접수 마감<br>
+                        ※ 수상자 대상 개별 연락을 통해 시상식 진행 예정</div>
+                </div>
+                <div class="content_area">
+                    <div class="tag fb">시상 내역</div>
+                    <div class="text_area">총 30명 (유치부, 초등 저학년/고학년)</div>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>대상</th>
+                                <td>총 3명</td>
+                                <td>한국미술협회 이사장상 및<br>
+                                    투자지원금 100만원</td>
+                            </tr>
+                            <tr>
+                                <th>최우수상</th>
+                                <td>총 6명</td>
+                                <td>한국미술협회 이사장상 및<br>
+                                    투자지원금 50만원</td>
+                            </tr>
+                            <tr>
+                                <th>우수상</th>
+                                <td>총 9명</td>
+                                <td>한국미술협회 이사장상 및<br>
+                                    투자지원금 30만원</td>
+                            </tr>
+                            <tr>
+                                <th>장려상</th>
+                                <td>총 12명</td>
+                                <td>한국미술협회 이사장상 및<br>
+                                    투자지원금 10만원</td>
+                            </tr>
+                            <tr>
+                                <th>참가상</th>
+                                <td>전원</td>
+                                <td>우량 해외주식 1만원</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="content_area">
+                    <div class="tag fb mb0">접수 방법</div>
+                    <div class="text_area">
+                        <div class="step_wrap">
+                            <div class="step">STEP 1</div>
+                            <div class="step_text">
+                                <div class="step_text_main">
+                                    업로드 할 출품작 및 작품 설명 준비
+                                </div>
+                                <div class="dot">출품작(사진촬영/스캔) 및 자녀가 작품을 그리고 있는 사진</div>
+                                <div class="dot">수상자 대상 개별 연락을 통해 시상식 진행 예정</div>
+                            </div>
+                        </div>
+
+                        <div class="step_wrap">
+                            <div class="step">STEP 2</div>
+                            <div class="step_text">
+                                <div class="step_text_main">
+                                    해당 페이지의 <span class="fb">작품 접수하기</span> 버튼을 통해 신청
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="content_list show">
+                <div class="visual mb20">
+                    <img src="img/body02.png" alt="">
+                    <a href="" class="btn_meta">메타버스 전시회 보러가기</a>
+                </div>
+                <div class="sub_tab_wrap">
+                    <ul class="sub_tab">
+                        <li class="sub_tab_list sub_tab_list_on">대상</li>
+                        <li class="sub_tab_list">최우수상</li>
+                        <li class="sub_tab_list">우수상</li>
+                        <li class="sub_tab_list">장려상</li>
+                    </ul>
+                </div>
+
+
+                <!-- Slider main container -->
+                <div class="swiper swiper01 swiper_show">
+                   <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="swiper-img">
+                            <img src="img/art_img01-01.png" alt="">
+                        </div>
+                        <div class="swiper-text">
+                            맹*준 어린이
+                        </div>
+                    </div>
+                    <!-- <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div> -->
+                    </div>
+                     <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                    <div class="decoration"><img src="img/nds_img_gabadge.png" alt=""></div>
+                </div>
+
+
+                <!-- Slider main container -->
+                <div class="swiper swiper02">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="swiper-img">
+                                <img src="img/art_img02-01.png" alt="">
+                            </div>
+                            <div class="swiper-text">
+                                맹*준 어린이
+                            </div>
+                        </div>
+                        <!-- <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div> -->
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+
+                <!-- Slider main container -->
+                <div class="swiper swiper03">
+                    <!-- Additional required wrapper -->
+                   <div class="swiper-wrapper">
+                     <!-- Slides -->
+                     <div class="swiper-slide">
+                         <div class="swiper-img">
+                             <img src="img/art_img03-01.png" alt="">
+                         </div>
+                         <div class="swiper-text">
+                             맹*준 어린이
+                         </div>
+                     </div>
+                     <!-- <div class="swiper-slide">Slide 2</div>
+                     <div class="swiper-slide">Slide 3</div> -->
+                     </div>
+                      <!-- If we need pagination -->
+                     <div class="swiper-pagination"></div>
+                 </div>
+
+
+                <!-- Slider main container -->
+                <div class="swiper swiper04">
+                    <!-- Additional required wrapper -->
+                   <div class="swiper-wrapper">
+                     <!-- Slides -->
+                     <div class="swiper-slide">
+                         <div class="swiper-img">
+                             <img src="img/art_img04-01.png" alt="">
+                         </div>
+                         <div class="swiper-text">
+                             맹*준 어린이
+                         </div>
+                     </div>
+                     <!-- <div class="swiper-slide">Slide 2</div>
+                     <div class="swiper-slide">Slide 3</div> -->
+                     </div>
+                      <!-- If we need pagination -->
+                     <div class="swiper-pagination"></div>
+                 </div>
+
+
+
+
+
+
+            </div>       
+            <div class="content_list show">
+                <div class="FAQ_wrap">
+                    <div class="FAQ_tag">FAQ</div>
+                    <div class="FAQ_text fb">자주묻는 질문</div>
+                </div>
+                <div class="accordion">
+                    <ul>
+                        <li class="accordion_off">
+                            <div class="title">
+                                <div class="icon_q">Q.</div>
+                                <div class="title_text">미성년 자녀의 계좌개설은 필수인가요?</div>
+                                <div class="arrow"><img src="img/nds_icon_arrow.png" alt=""></div>
+                            </div>
+                            <div class="stroke"></div>
+                            <div class="desc">네, 어린이 그림 대회에 참여하시면 해외주식이 자녀의 계좌로 지급됩니다. 이를 위해 당사 미성년 자녀 계좌는 필수입니다.</div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>  
+        <!-- /content영역 -->
+
+        <!-- 하단 버튼 -->
+        <!-- <a href="#" class="bottom_btn mw_title">버튼명</a> -->
+        <!-- /하단 버튼 -->
+    </div>
+
+        <script>
+            
+            const tab = document.querySelector('.tab');
+            const tab_list = document.querySelectorAll('.tab_list');
+            const tab_wrap = document.querySelector('.tab_wrap');
+            const content = document.querySelector('.content_wrap');
+            const content_list = document.querySelectorAll('.content_list');
+            const sub_tab_wrap = document.querySelector('.sub_tab_wrap');
+            const sub_tab_list = document.querySelectorAll('.sub_tab_list');
+            const swiper_content = document.querySelectorAll('.swiper');
+            const accordion = document.querySelectorAll('.accordion li');
+
+
+
+            for(let i = 0; i< tab_list.length; i++){
+
+                const contentScrollTop = content_list[i].offsetTop - tab_wrap.offsetHeight;
+
+                tab_list[i].addEventListener('click',function(){
+                    window.scrollTo({top:contentScrollTop, behavior: 'smooth'});  
+                });
+            }
+
+            window.addEventListener('scroll', function(){
+                    if( window.scrollY >= content_list[0].offsetTop - tab.offsetHeight){
+                        tab_list[1].classList.remove('on');
+                        tab_list[2].classList.remove('on');
+                        tab_list[0].classList.add('on');
+                    } 
+                    if(window.scrollY >= content_list[1].offsetTop - tab.offsetHeight){
+                        tab_list[0].classList.remove('on');
+                        tab_list[2].classList.remove('on');
+                        tab_list[1].classList.add('on');
+                    }
+                    if(window.scrollY >= content_list[2].offsetTop - tab.offsetHeight){
+                        tab_list[0].classList.remove('on');
+                        tab_list[1].classList.remove('on');
+                        tab_list[2].classList.add('on');
+                    }
+                });
+
+
+
+
+            // 탭 
+            
+            // for(let i = 0; i < tab_list.length; i++){
+
+            //     tab_list[i].addEventListener('click',tabClick);
+
+            //     function tabClick(){
+            //         document.querySelector('.on').classList.remove('on');
+            //         tab_list[i].classList.add('on');
+            //         document.querySelector('.show').classList.remove('show');
+            //         content_list[i].classList.add('show');
+            //     }
+            // }
+
+            for(let i =0; i < sub_tab_list.length; i++){
+
+                sub_tab_list[i].addEventListener('click',tabClick);
+
+                function tabClick(){
+                    document.querySelector('.sub_tab_list_on').classList.remove('sub_tab_list_on');
+                    sub_tab_list[i].classList.add('sub_tab_list_on');
+                    document.querySelector('.swiper_show').classList.remove('swiper_show');
+                    swiper_content[i].classList.add('swiper_show');
+                }
+
+
+            }
+
+
+            for(let i = 0; i < accordion.length; i++){
+                accordion[i].addEventListener('click',function(){
+                    if(accordion[i].classList.contains('accordion_on')){
+                        accordion[i].classList.remove('accordion_on');
+                        accordion[i].classList.add('accordion_off');
+                    } else{
+                        accordion[i].classList.remove('accordion_off');
+                        accordion[i].classList.add('accordion_on');
+                    }
+                });
+            }
+        
+
+
+            
+            // if(tab_list.length == 2){
+            //     for(let i = 0; i < 2; i++){
+            //         tab_list[i].style.width = 50 + '%';
+            //     }
+            // }
+
+
+            // 탭 스와이프
+
+            // if(tab.classList.contains('tab_swipe')){
+            //     let idx = 0;
+            //     let left = 0;
+
+            //     const tab_list_width = 33.3333;
+            //     tab_wrap.style.maxWidth = 100 + 'vw';
+            //     tab_wrap.style.width = 100 + '%';
+            //     tab_wrap.style.overflowX = 'scroll';
+
+            //     for(let i = 0; i < tab_list.length; i++){
+            //         tab_list[i].style.left = `${tab_list_width * i}vw`
+            //         tab.style.width = `${tab_list_width * (i+1)}vw`
+            //     }
+            // }
+        </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'LOTTERIACHAB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {-webkit-text-size-adjust:none;}
+
+
+.mw_L{font-size: 26px;}
+.mw_P1{font-size: 21px;}
+.mw_P2{font-size: 19px;}
+.mw_H{font-size: 17px;}
+.mw_Title{font-size: 4.4444vw;}
+.mw_Body{font-size: 14px;}
+.mw_Notice{font-size: 13px;}
+.mw_Info{font-size: 12px;}
+.mw_Label{font-size: 10px;}
+.fb{font-weight: bold;}
+
+body{
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+
+.wrap{
+    height: 8000px;
+}
+
+header{
+    position: relative;
+    padding: 2.3611vw 0;
+}
+.title{
+    text-align: center;   
+}
+.back_btn{
+    left: 2.7778vw;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6.1111vw;
+
+
+}
+.back_btn img{
+    display: block;
+    width: 100%;
+}
+
+.tab{
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    background: #fff;
+    border-bottom: 0.2778vw solid #999;
+
+}
+.fade{
+    background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+}
+
+.tab_wrap{
+    position: sticky;
+    top: 0;
+    left: 0;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    z-index: 10;
+}
+
+.tab_wrap::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+.tab_wrap li{
+    display: block;
+    color: #999;
+    text-align: center;
+    padding: 3.4722vw 0;
+    cursor: pointer;
+}
+
+.tab_wrap li:nth-child(1){width: 30.5556vw;}
+.tab_wrap li:nth-child(2){width: 33.3333vw;}
+.tab_wrap li:nth-child(3){width: 36.1111vw;}
+
+.tab_wrap .on{
+    color: #000;
+    border-bottom: 0.2778vw solid #000;
+    margin-bottom: -0.2778vw;
+}
+.content_wrap{}
+.content .title{
+    font-family: 'LOTTERIACHAB';
+}
+.content_wrap .content_list{display: none; margin-bottom: 8.3333vw;}
+.content_list:last-child{background: #F2F6FA; padding: 8.3333vw 5.5556vw 5.5556vw;}
+.content_wrap .show{display: block;}
+.bottom_btn{
+    display: block;
+    width: 100%;
+    padding: 3.3333vw 0;
+    background-color: #84c13d;
+    text-align: center;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-decoration: none;
+}

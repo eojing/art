@@ -555,10 +555,12 @@
                     for(let j = 0; j < sub_tab_list.length; j++){
     
                         sub_tab_list[j].classList.remove('sub_tab_list_on');
+                        swiper_content[j].classList.remove('swiper_show');
     
                     }
 
                     sub_tab_list[i].classList.add('sub_tab_list_on');
+                    swiper_content[i].classList.add('swiper_show');
 
 
                 })

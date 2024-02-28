@@ -44,9 +44,13 @@ table {
 }
 img{width: 100%;}
 
-input {
-	-webkit-appearance: none;
-	-webkit-border-radius: 0;
- }
- 
+input, textarea {
+
+    appearance: none;
+    
+    -webkit-appearance: none;
+    
+    -webkit-border-radius: 0;
+    
+    }
   

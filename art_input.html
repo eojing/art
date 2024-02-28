@@ -123,6 +123,7 @@
         border-radius: 0px !important;
         height: 13.8889vw;
         pointer-events: initial;
+        text-align: center;
     }
     .sum_btn.off{opacity: 0.6; pointer-events: none;}
     .fade_img{max-width: 44.4444vw; width: 100%; height: 44.4444vw;position: absolute; right: 0; top: 0;}
@@ -134,6 +135,32 @@
     .add_btn_wrap .text{
         font-size: 3.3333vw; line-height: 5vw; color: #999; text-align: center; margin-top: 4.4444vw;
     }
+    .popup_back{display: none;}
+    .popup_back_on{display: block; background: #000; position: fixed; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.6;}
+    .popup_wrap{position: fixed; top: 100%; left: 0; transition: all 0.4s ease-in; width: 100%; background: #fff; border-top-left-radius: 5.5556vw; border-top-right-radius: 5.5556vw;}
+    .popup_btn_text{padding-bottom: 11.1111vw}
+    .popup_btn_text h4{color: #333; font-size: 4.7222vw; line-height: 7.2222vw; text-align: center; margin: 7.2222vw 4.4444vw;}
+    .popup_btn_text p{position: relative; color: #999; font-size: 3.8889vw; line-height: 5.5556vw; padding-left: 2.2222vw; margin: 0 4.4444vw; margin-bottom: 1.6667vw;}
+    .popup_btn_text p:last-of-type{margin-bottom: 5.5556vw;}
+    .popup_btn_text p::before{content: ''; display: block; background: #999; width: 0.5556vw; height: 0.5556vw; position: absolute; top: 2.7778vw; left: 0.2778vw;}
+    .popup_stroke{margin: 5.5556vw; width: 88.8889vw; height: 0.2778vw; background: #E0E0E0;}
+    .check_box{padding: 4.4444vw; display: flex; border: 0.2778vw solid #F0F0F0; border-radius: 2.7778vw;}
+    .check_box.check_box_on{border-color: #84C13D;}
+    .check_box_img{width: 5vw; height: 5vw; margin-right: 1.6667vw;}
+    .check_box_img_on{display: none;}
+    .popup_btn_wrap{display: flex; position: relative;}
+    .popup_btn{line-height: 7.2222vw; font-size: 4.7222vw; text-align: center; padding: 3.3333vw 0;}
+    .btn_cancel{width: 30%; color: #333; background: #E0E0E0;}
+    .btn_okay{width: 70%; background: #84C13D; color: #fff;}
+    .btn_fade{position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 70%;
+    height: 100%;
+    background: #fff;
+    opacity: 0.6;
+    display: block;
+}
     /* .add_btn_text::before{ display: block; content: ''; width: 3.3333vw; height: 3.3333vw; background: url(img/ndsw_icon_plus04_h12.png);} */
     </style>
 </head>
@@ -227,20 +254,78 @@
             </div>
                 
             
-            <input type="submit" value="접수하기" class="sum_btn off">
+            <div class="sum_btn">접수하기</div>
         </form>
+        <div class="popup_back"></div>
+        <div class="popup_wrap">
+                <div class="popup_btn_text">
+                    <h4>접수 유의사항</h4>
+                <div class="popup_stroke"></div>   
+                    <p>출품된 그림의 저작권은 출품자(화가)에게 있으며, 그림의 사용권은 NH투자증권에 있습니다.</p>
+                    <p>응모작은 출품자의 창작물이여야 합니다. 저작권 침해나 타인의 도움을 받은 경우 심사 대상에서 제외됩니다.</p>
+                    <p>NH투자증권은 직접적인 비영리적 행위를 목적으로 수상작의 저작재산권(복제권, 공연권, 공중송신권, 전시권, 배포권, 2차적저작물작성권 등)을 사용할 수 있는 권리와 제3자에게 제공할 수 있는 권리를 가집니다.</p>
+                    <p>수상작에 한해 수상자는 저작재산권(2차적저작물작성권 포함) 양도에 대해 동의하셔야 하며, 동의하지 않을 시 수상에서 제외될 수 있습니다.</p>
+                    <div class="check_box">
+                        <div class="check_box_img check_box_img_off"><img src="img/ndsw_icon_rcheck18_nn.png" alt=""></div>
+                        <div class="check_box_img check_box_img_on"><img src="img/ndsw_icon_rcheck18_sn.png" alt=""></div>
+                        <div class="check_box_text">위 내용 확인했으며, 모두 동의합니다.</div>
+                    </div>
+            </div>
+                <div class="popup_btn_wrap">
+                    <div class="popup_btn btn_cancel">취소</div>
+                    <div class="popup_btn btn_okay">확인</div>
+                    <div class="popup_btn btn_fade"></div>
+                </div>
 
+        </div>
 
     </div>
 
 
     <script>
+
+        const check_box = document.querySelector('.check_box');
+        const check_box_img_off = document.querySelector('.check_box_img_off');
+        const check_box_img_on = document.querySelector('.check_box_img_on');
+        const btn_okay = document.querySelector('.btn_okay');
+        const btn_fade = document.querySelector('.btn_fade');
+        const popup_back = document.querySelector('.popup_back');
+        const popup = document.querySelector('.popup_wrap');
+        const sum_btn = document.querySelector('.sum_btn');
+        
+        console.log(popup.offsetHeight)
+
+        sum_btn.addEventListener('click',function(){
+            popup_back.classList.add('popup_back_on');
+            popup.style.top = document.body.offsetHeight - popup.offsetHeight + 'px';
+
+        });
+
+        check_box.addEventListener('click',function(){
+            if(check_box.classList.contains('check_box_on')){
+                check_box.classList.remove('check_box_on');
+                check_box_img_off.style.display = 'block';
+                check_box_img_on.style.display = 'none';
+                btn_fade.style.display = 'block'
+
+
+            }else{
+                check_box.classList.add('check_box_on');
+                check_box_img_off.style.display = 'none';
+                check_box_img_on.style.display = 'block';
+                btn_fade.style.display = 'none'
+
+            }
+        });
+
+
+
         // 계좌번호 최대숫자 제한 부분
-        function maxLengthCheck(object){
-            if (object.value.length > object.maxLength){
-                object.value = object.value.slice(0, object.maxLength);
-    }
-}
+//         function maxLengthCheck(object){
+//             if (object.value.length > object.maxLength){
+//                 object.value = object.value.slice(0, object.maxLength);
+//     }
+// }
 
 
 // textarea height값 변환 부분

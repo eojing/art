@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style copy.css">
+    <style>
+
+        .wrap{
+            position: relative;
+            font-size: 3.8889vw;
+            line-height: 5.5556vw;
+        }
+
+        .input_box{
+            margin : 0 4.4444vw 8.3333vw;
+            
+        }
+        .input_tag{position: relative;
+    font-size: 3.8889vw;
+    display: inline-block;
+    margin-bottom: 0.5556vw;}
+        .input_tag::after{
+            content: '';
+            display: block;
+            position: absolute;
+            background: url(img/nds_icon_ess.png);
+            width: 2.9639vw;
+            height:2.9639vw;
+            background-size: contain;
+            right: -2.7778vw;
+            top: 0;
+        }
+        input{display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #E0E0E0;
+    font-size: 4.4444vw;
+    line-height: 6.6667vw;
+    padding: 2.2222vw 0;
+            color: #000;
+            font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+    input::placeholder{
+        color: #C5C5C5;
+    }
+
+    .radio_box{display: flex;justify-content: space-between; margin-top: 2.7778vw;}
+    .age_btn{
+        display: inline-block;
+    text-align: center;
+    padding: 2.3611vw 0;
+    border: 0.2778vw solid #e0e0e0;
+    border-radius: 8px;
+    max-width: 28.8889vw;
+    width: 100%;
+    line-height: 4.1667vw;
+    }
+    .age_input{
+        display: none;
+    }
+    .age_input:checked + label{
+        border: 0.2778vw solid #000;
+        font-weight: bold;
+    }
+        label span{
+            font-size: 2.7778vw;
+            font-weight: normal;
+        }
+
+
+    input[type=file]{
+        display: none;
+    }
+    .file_box{display: flex; justify-content: space-between; margin-top: 2.7778vw;}
+    .file_btn{
+        display: block;
+        padding: 11.1111vw 2.7778vw;
+        max-width: 44.4444vw;
+        width: 100%;
+        color: #666666;
+        border: 0.2778vw solid #e0e0e0;
+        border-radius: 2.2222vw;
+    }
+
+    .plus{
+        width: 8.3333vw;
+        height: 8.3333vw;
+        margin: 0 auto;
+        margin-bottom: 2.7778vw;
+    }
+    .file_text{text-align: center; font-size: 3.8889vw;}
+    .input_text_area{padding: 5.5556vw; border: 1px solid #E0E0E0; max-width: 91.1111vw; width: 100%;
+        font-size: 4.4444vw; line-height: 6.6667vw; box-sizing: border-box; border-radius: 2.2222vw; height: 44.4444vw;
+    }
+    textarea{font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;}
+    textarea:focus{
+        border-color: #000;
+    }
+    input:focus{
+        border-bottom: 1px solid #000;
+    }
+    .textarea_wrap{position: relative; margin: 2.7778vw 0;}
+    .text_length{
+        position: absolute;
+        font-size: 3.8889vw;
+        right: 5.5556vw;
+        bottom: 5.5556vw;
+    }
+    .sum_btn{
+        position: absolute;
+    bottom: 0;
+    left: 0;
+    line-height: 7.2222vw;
+    padding: 3.3333vw 8.8889vw;
+    background: #84C13D;
+    color: #fff;
+    font-size: 4.7222vw;
+    }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <form action="">
+            <div class="input_box">
+                <div class="input_tag">자녀 성명</div>
+                <input type="text" placeholder="이름을 입력해주세요.">
+            </div>   
+            
+            <div class="input_box">
+                <div class="input_tag">자녀 계좌번호 (참여상 혜택 지급용)</div>
+                <input type="text"  placeholder="계좌를 입력해주세요.">
+            </div>   
+
+
+            <div class="input_box">
+                <div class="input_tag">접수 부문 선택</div>
+                <div class="radio_box">
+                    <input type="radio" name="age" id="age1" value="age1" class="age_input">
+                    <label for="age1" class="age_btn">유치부<br>
+                     <span>(만 3세~미취학)</span></label>
+
+
+                    <input type="radio" name="age" id="age2" value="age2" class="age_input">
+                    <label for="age2" class="age_btn">초등 저학년<br>
+                       <span>(1~3학년)</span></label>
+
+
+                    <input type="radio" name="age" id="age3" value="age3" class="age_input">
+                    <label for="age3" class="age_btn">초등 고학년
+                        <br>
+                        <span>(4~6학년)</span></label>
+                </div>
+            </div>  
+            
+            <div class="input_box">
+                <div class="input_tag">작품 업로드(총 2장, 파일당 5MB이내)</div>
+                <div class="file_box">
+                    <input type="file" name="file" id="file1">
+                    <label for="file1" class="file_btn">
+                        <div class="plus"><img src="img/ndsw_icon_upload_plus.png" alt=""></div>
+                        <div class="file_text">
+                            출품작<br>
+                            (사진촬영/스캔)
+                        </div>
+                    </label>
+
+                    <input type="file" name="file" id="file2">
+                    <label for="file2" class="file_btn">
+                        <div class="plus"><img src="img/ndsw_icon_upload_plus.png" alt=""></div>
+                        <div class="file_text">
+                            자녀가 작품을<br>
+                            그리고 있는 사진
+                        </div>
+                    </label>
+                </div>
+            </div>   
+
+            <div class="input_box">
+                <div class="input_tag">작품 제목</div>
+                <input type="text" placeholder="제목을 입력해주세요. (20자 이내)" maxlength="20">
+            </div>   
+
+            <div class="input_box">
+                <div class="input_tag">작품 설명</div>
+                <div class="textarea_wrap">
+                    <textarea name="" id="" placeholder="작품의 간략한 설명을 적어주세요.&#10;(100자이내)" class="input_text_area" maxlength="100"></textarea>
+                    <div class="text_length"><span class="change_num">0</span>/100</div>
+                </div>
+            </div>   
+
+
+            
+            <input type="submit" value="접수하기" class="sum_btn">
+        </form>
+
+
+    </div>
+
+
+    <script>
+        // 계좌번호 최대숫자 제한 부분
+        function maxLengthCheck(object){
+            if (object.value.length > object.maxLength){
+                object.value = object.value.slice(0, object.maxLength);
+    }
+}
+
+
+// textarea height값 변환 부분
+// const DEFAULT_HEIGHT = 30; // textarea 기본 height
+
+// const textarea = document.querySelector('.text-area');
+
+// textarea.oninput = (event) => {
+//   const target = event.target;
+
+//   target.style.height = 0;
+//   target.style.height =  target.scrollHeight + 'px';
+// };
+
+
+
+// 계좌번호 포커스 부분
+// const first = document.querySelector('.account_number_first');
+// const second = document.querySelector('.account_number_second');
+// const third = document.querySelector('.account_number_third');
+
+
+// first.addEventListener('keyup', function(){
+//     if(first.value.length == first.maxLength){
+//         second.focus();
+//     }    
+// })
+
+// second.addEventListener('keyup', function(){
+//     if(this.value.length == this.maxLength){
+//         third.focus();
+//     }
+    
+// })
+
+
+
+    </script>
+
+  
+</body>
+</html>

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/style copy.css">
 
     <style>
+        .wrap{line-height: 5.5556vw;}
         img{width: 100%;}
         .tag{
             background: #FDF6D9;
@@ -20,6 +21,7 @@
             display: inline-block;
             margin-bottom: 2.7778vw;
             font-size: 4.7222vw;
+            line-height: 7.2222vw;
 
         }
         .visual{position: relative;}
@@ -36,6 +38,7 @@
         .gray{
             color: #999;
             font-size: 3.6111vw;
+            line-height: 5.5556vw;
         }
         .box{
             border-radius: 3.3333vw;
@@ -67,6 +70,7 @@
         }
         .text_area{
             margin-bottom: 1.1111vw;
+            line-height: 6.6667vw;
         }
         table{border-top: 0.2778vw solid #ADADAD; border-bottom: 0.2778vw solid #E0E0E0; font-size: 3.6111vw;}
         table th{background: #F5F5F5; color: #666; width: 22.2222vw; height: 16.6667vw; text-align: center; line-height: 16.6667vw; vertical-align: middle; border-right: 0.2778vw solid #e0e0e0;}
@@ -199,15 +203,16 @@
         .stroke_on{background: #F0F0F0;}
         .desc{font-size: 3.8889vw; color: #666; margin-bottom: 4.4444vw;}
         .btn{display: block; text-align: center; background: #4E5255; font-size: 3.8889vw; padding: 2.7778vw 17.6389vw; color: #fff; border-radius: 2.2222vw; text-decoration: none;}
-        .btn_main{width: 88.8889vw; position: absolute; height: 13.8889vw; font-size: 4.4444vw; border-radius: 3.3333vw; padding: 0; line-height: 13.8889vw; bottom: 6%;
-    left: 50%;
-    transform: translateX(-50%);}
+        .btn_main{width: 88.8889vw; position: absolute; height: 13.8889vw; font-size: 4.4444vw; border-radius: 3.3333vw; padding: 0; line-height: 13.8889vw; bottom: 6%; left: 50%; transform: translateX(-50%); background: #16171B;}
+        .fixed_btn{position: fixed; bottom: 5.5556vw; z-index: 100; transition: all 0.2s ease-in; opacity: 0; pointer-events: none;}
+        .fixed_on{opacity: 100; pointer-events: all;}
         .ex_text{font-size: 3.6111vw; color: #999; margin-bottom: 1.1111vw;}
         .ex_img{width: 77.7778vw;}
     </style>
 </head>
 <body>
     <div class="wrap">
+        <a href="#" class="btn btn_main fixed_btn">작품접수하기</a>
         <div class="visual">
             <img src="img/visual.png" alt="">
             <a href="#" class="btn btn_main">작품접수하기</a>
@@ -517,6 +522,7 @@
             const swiper_content = document.querySelectorAll('.swiper');
             const accordion = document.querySelectorAll('.accordion li');
             const stroke = document.querySelectorAll('.stroke');
+            const bottom_btn = document.querySelector('.fixed_btn');
 
 
 
@@ -534,7 +540,10 @@
                         tab_list[1].classList.remove('on');
                         tab_list[2].classList.remove('on');
                         tab_list[0].classList.add('on');
-                    } 
+                        bottom_btn.classList.add('fixed_on');
+                    } else{
+                        bottom_btn.classList.remove('fixed_on');
+                    }
                     if(window.scrollY >= content_list[1].offsetTop - tab.offsetHeight){
                         tab_list[0].classList.remove('on');
                         tab_list[2].classList.remove('on');

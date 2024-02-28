@@ -26,10 +26,6 @@ body{
 }
 
 
-.wrap{
-    height: 8000px;
-}
-
 header{
     position: relative;
     padding: 2.3611vw 0;
@@ -100,7 +96,7 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 5
     font-family: 'LOTTERIACHAB';
 }
 .content_wrap .content_list{display: none; margin-bottom: 8.3333vw;}
-.content_list:last-child{background: #F2F6FA; padding: 8.3333vw 5.5556vw 5.5556vw;}
+.content_list:last-child{background: #F2F6FA; padding: 8.3333vw 5.5556vw 27.7778vw; margin-bottom: 0;}
 .content_wrap .show{display: block;}
 .bottom_btn{
     display: block;

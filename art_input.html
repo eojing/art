@@ -137,14 +137,14 @@
     }
     .popup_back{display: none;}
     .popup_back_on{display: block; background: #000; position: fixed; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.6;}
-    .popup_wrap{position: fixed; top: 100%; left: 0; transition: all 0.4s ease-in; width: 100%; background: #fff; border-top-left-radius: 5.5556vw; border-top-right-radius: 5.5556vw;}
+    .popup_wrap{position: fixed; top: 200%; left: 0; transition: all 0.4s ease-in; width: 100%; background: #fff; border-top-left-radius: 5.5556vw; border-top-right-radius: 5.5556vw; transform: translateY(-100%);}
     .popup_btn_text{padding-bottom: 11.1111vw}
     .popup_btn_text h4{color: #333; font-size: 4.7222vw; line-height: 7.2222vw; text-align: center; margin: 7.2222vw 4.4444vw;}
     .popup_btn_text p{position: relative; color: #999; font-size: 3.8889vw; line-height: 5.5556vw; padding-left: 2.2222vw; margin: 0 4.4444vw; margin-bottom: 1.6667vw;}
     .popup_btn_text p:last-of-type{margin-bottom: 5.5556vw;}
     .popup_btn_text p::before{content: ''; display: block; background: #999; width: 0.5556vw; height: 0.5556vw; position: absolute; top: 2.7778vw; left: 0.2778vw;}
     .popup_stroke{margin: 5.5556vw; width: 88.8889vw; height: 0.2778vw; background: #E0E0E0;}
-    .check_box{padding: 4.4444vw; display: flex; border: 0.2778vw solid #F0F0F0; border-radius: 2.7778vw;}
+    .check_box{padding: 4.4444vw; display: flex; border: 0.2778vw solid #F0F0F0; border-radius: 2.7778vw; margin: 0 5.5556vw;}
     .check_box.check_box_on{border-color: #84C13D;}
     .check_box_img{width: 5vw; height: 5vw; margin-right: 1.6667vw;}
     .check_box_img_on{display: none;}
@@ -255,7 +255,7 @@
                 
             
             <div class="sum_btn">접수하기</div>
-        </form>
+     
         <div class="popup_back"></div>
         <div class="popup_wrap">
                 <div class="popup_btn_text">
@@ -278,7 +278,7 @@
                 </div>
 
         </div>
-
+    </form>
     </div>
 
 
@@ -297,7 +297,7 @@
 
         sum_btn.addEventListener('click',function(){
             popup_back.classList.add('popup_back_on');
-            popup.style.top = document.body.offsetHeight - popup.offsetHeight + 'px';
+            popup.style.top = 100 + '%'
 
         });
 

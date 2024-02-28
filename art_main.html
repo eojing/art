@@ -23,6 +23,11 @@
 
         }
         .visual{position: relative;}
+        .content_visual{margin-bottom: 8.3333vw;}
+        .content_visual_text{font-size: 3.8889vw; color: #666; padding: 0 4.4444vw 0 5.5556vw; position: absolute;
+    bottom: 12%;}
+        .content_visual_text div{margin-bottom: 2.7778vw;}
+        .content_visual_text div:last-of-type{margin-bottom: 0;}
         .content_area{
             padding: 0 5.5556vw;
             margin-bottom: 8.3333vw;
@@ -194,13 +199,20 @@
         .stroke{width: 100%; height: 0.2778vw; margin: 4.4444vw 0; background: #fff;}
         .stroke_on{background: #F0F0F0;}
         .desc{font-size: 3.8889vw; color: #666; margin-bottom: 4.4444vw;}
-        .btn{display: block; background: #4E5255; font-size: 3.8889vw; padding: 2.7778vw 17.6389vw; color: #fff; border-radius: 2.2222vw; text-decoration: none;}
+        .btn{display: block; text-align: center; background: #4E5255; font-size: 3.8889vw; padding: 2.7778vw 17.6389vw; color: #fff; border-radius: 2.2222vw; text-decoration: none;}
+        .btn_main{width: 88.8889vw; position: absolute; height: 13.8889vw; font-size: 4.4444vw; border-radius: 3.3333vw; padding: 0; line-height: 13.8889vw; bottom: 6%;
+    left: 50%;
+    transform: translateX(-50%);}
         .ex_text{font-size: 3.6111vw; color: #999; margin-bottom: 1.1111vw;}
         .ex_img{width: 77.7778vw;}
     </style>
 </head>
 <body>
     <div class="wrap">
+        <div class="visual">
+            <img src="img/visual.png" alt="">
+            <a href="#" class="btn btn_main">작품접수하기</a>
+        </div>
 
         <!-- tab영역 -->
         <div class="tab_wrap">
@@ -216,9 +228,15 @@
         <!-- content영역 -->
         <div class="content_wrap">       
             <div class="content_list show">
-                <div class="visual">
+                <div class="content_visual">
                     <img src="img/body01.png" alt="">
+                    <div class="content_visual_text">
+                        <div>2023년부터 시작된 어린이 미술대회로 아이들이 그림을<br>통해 경제관념을 키우며 이해할 수 있는 경험을 제공합니다.</div>
+                        <div>한국미술협회 추천 심사위원들의 공정한 심사를 거쳐<br>수상작을 선정합니다.</div>
+                        <div>공모전에 참여하시면 NH투자증권에서 다양한 혜택도<br>받으실 수 있습니다.</div>
+                    </div>
                 </div>
+
                 <div class="content_area">
                     <div class="tag fb">주제</div>
                     <div class="text_area">내가 모은 용돈으로 햇던 뿌듯한 일 또는 용돈을 모아 이루고 싶은 꿈을 그려주세요!</div>
@@ -548,54 +566,30 @@
             //     }
             // }
 
+
+
+            // 스와이퍼 탭
             for(let i =0; i < sub_tab_list.length; i++){
 
                 sub_tab_list[i].addEventListener('click',function(){
                     
                     for(let j = 0; j < sub_tab_list.length; j++){
-    
                         sub_tab_list[j].classList.remove('sub_tab_list_on');
                         swiper_content[j].classList.remove('swiper_show');
-    
                     }
-
                     sub_tab_list[i].classList.add('sub_tab_list_on');
-                    swiper_content[i].classList.add('swiper_show');
-
-
+                    swiper_content[i].classList.add('swiper_show'); 
                 })
-
-                // sub_tab_list[i].addEventListener('click',tabClick);
-
-                // function tabClick(){
-                //     document.querySelector('.sub_tab_list_on').classList.remove('sub_tab_list_on');
-                //     sub_tab_list[i].classList.add('sub_tab_list_on');
-                //     document.querySelector('.swiper_show').classList.remove('swiper_show');
-                //     swiper_content[i].classList.add('swiper_show');
-                // }
-
-
             }
 
 
+
+            // 아코디언
             for(let i = 0; i < accordion.length; i++){
                 
                 accordion[i].addEventListener('click',function(){
 
-                    for(let j = 0; j < accordion.length; j++){
-                            accordion[j].classList.remove('accordion_on');
-                            stroke[j].classList.remove('stroke_on');
-                        }
-       
-                        if(accordion[i].classList.contains('accordion_on')){
-                            accordion[i].classList.remove('accordion_on');
-                            
-                        }else{
-                            accordion[i].classList.add('accordion_on');
-                        }
-
-                       
-
+                    accordion[i].classList.toggle('accordion_on');
 
 
    
@@ -605,7 +599,8 @@
                 });
             }
         
-
+            // accordion[j].classList.remove('accordion_on');
+            //                 stroke[j].classList.remove('stroke_on');
 
             
             // if(tab_list.length == 2){

@@ -80,9 +80,11 @@
         .step_wrap{
             display: flex;
             margin-top: 3.3333vw;
+            
         }
         .step{
             display: inline-block;
+            font-weight: bold;
             font-size: 2.7778vw;
             border: 0.2778vw solid #333;
             border-radius: 27.7778vw;
@@ -597,13 +599,19 @@
                 accordion[i].addEventListener('click',function(){
 
                     accordion[i].classList.toggle('accordion_on');
+                    stroke[i].classList.add('stroke_on');
 
-
-   
-
-                       
+                    if(accordion[i].classList.contains('accordion_on')){
+                    }else{
+                        setTimeout(function(){
+                            stroke[i].classList.remove('stroke_on');
+                        },400)
+                        
+                        
+                    }
 
                 });
+
             }
         
             // accordion[j].classList.remove('accordion_on');

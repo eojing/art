@@ -15,7 +15,7 @@
         }
 
         .input_box{
-            margin : 0 4.4444vw 8.3333vw;
+            padding : 0 4.4444vw 8.3333vw;
             
         }
         .input_tag{position: relative;
@@ -78,6 +78,7 @@
     .file_box{display: flex; justify-content: space-between; margin-top: 2.7778vw;}
     .file_btn{
         display: block;
+        position: relative;
         padding: 11.1111vw 2.7778vw;
         max-width: 44.4444vw;
         width: 100%;
@@ -113,17 +114,26 @@
         bottom: 5.5556vw;
     }
     .sum_btn{
-        position: absolute;
-        bottom: 0;
-        left: 0;
         line-height: 7.2222vw;
         padding: 3.3333vw 8.8889vw;
         background: #84C13D;
         color: #fff;
         font-size: 4.7222vw;
-        border-radius: 0;
+        border-radius: 0px;
         height: 13.8889vw;
+        pointer-events: initial;
     }
+    .sum_btn.off{opacity: 0.6; pointer-events: none;}
+    .fade_img{max-width: 44.4444vw; width: 100%; height: 44.4444vw;position: absolute; right: 0; top: 0;}
+    .add_btn{position: relative; background: #f1f1f1; max-width: 91.1111vw; width: 100%; font-size: 3.8889vw; line-height: 5.5556vw; border-radius: 2.7778vw; padding: 2.7778vw 32.3611vw 2.7778vw  37.3611vw; text-align: center; margin: 0 auto;}
+    .add_btn_img{max-width: 3.3333vw; width: 100%; position: absolute;
+    left: 32.7778vw;
+    top: 3.3333vw;}
+    .add_btn_wrap{padding-bottom: 13.8889vw; }
+    .add_btn_wrap .text{
+        font-size: 3.3333vw; line-height: 5vw; color: #999; text-align: center; margin-top: 4.4444vw;
+    }
+    /* .add_btn_text::before{ display: block; content: ''; width: 3.3333vw; height: 3.3333vw; background: url(img/ndsw_icon_plus04_h12.png);} */
     </style>
 </head>
 <body>
@@ -165,6 +175,9 @@
                 <div class="file_box">
                     <input type="file" name="file" id="file1">
                     <label for="file1" class="file_btn">
+                        <div class="fade_img">
+                            <img src="img/ndsw_img_delet.png" alt="">
+                        </div>
                         <div class="plus"><img src="img/ndsw_icon_upload_plus.png" alt=""></div>
                         <div class="file_text">
                             출품작<br>
@@ -196,9 +209,24 @@
                 </div>
             </div>   
 
+            <div class="input_box">
+                <div class="input_tag">작품 제목</div>
+                <input type="text" placeholder="제목을 입력해주세요. (20자 이내)" maxlength="20">
+            </div>   
 
+
+            <div class="add_btn_wrap">
+
+                <div class="add_btn">
+                    <div class="add_btn_img"><img src="img/ndsw_icon_plus04_h12.png" alt=""></div>
+                    <div class="add_btn_text">자녀 추가하기</div>
+                </div>
+                <div class="text">자녀는 최대 2명까지 추가하실 수 있습니다.<br>
+                    접수 후에는 수정이 불가합니다.</div>
+            </div>
+                
             
-            <input type="submit" value="접수하기" class="sum_btn">
+            <input type="submit" value="접수하기" class="sum_btn off">
         </form>
 
 

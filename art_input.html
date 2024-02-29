@@ -5,164 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style copy.css">
-    <style>
-
-        .wrap{
-            position: relative;
-            font-size: 3.8889vw;
-            line-height: 5.5556vw;
-        }
-
-        .input_box{
-            padding : 0 4.4444vw 8.3333vw;
-            
-        }
-        .input_tag{position: relative;
-    font-size: 3.8889vw;
-    display: inline-block;
-    margin-bottom: 0.5556vw;}
-        .input_tag::after{
-            content: '';
-            display: block;
-            position: absolute;
-            background: url(img/nds_icon_ess.png);
-            width: 2.9639vw;
-            height:2.9639vw;
-            background-size: contain;
-            right: -2.7778vw;
-            top: 0;
-        }
-        input{display: block;
-            -webkit-appearance: none;
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid #E0E0E0;
-    font-size: 4.4444vw;
-    line-height: 6.6667vw;
-    padding: 2.2222vw 0;
-            color: #000;
-            font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-}
-
-    input::placeholder{
-        color: #C5C5C5;
-    }
-
-    .radio_box{display: flex;justify-content: space-between; margin-top: 2.7778vw;}
-    .age_btn{
-        display: inline-block;
-    text-align: center;
-    padding: 2.3611vw 0;
-    border: 0.2778vw solid #e0e0e0;
-    border-radius: 8px;
-    max-width: 28.8889vw;
-    width: 100%;
-    line-height: 4.1667vw;
-    }
-    .age_input{
-        display: none;
-    }
-    .age_input:checked + label{
-        border: 0.2778vw solid #000;
-        font-weight: bold;
-    }
-        label span{
-            font-size: 2.7778vw;
-            font-weight: normal;
-        }
-
-
-    input[type=file]{
-        display: none;
-    }
-    .file_box{display: flex; justify-content: space-between; margin-top: 2.7778vw;}
-    .file_btn{
-        display: block;
-        position: relative;
-        padding: 11.1111vw 2.7778vw;
-        max-width: 44.4444vw;
-        width: 100%;
-        color: #666666;
-        border: 0.2778vw solid #e0e0e0;
-        border-radius: 2.2222vw;
-    }
-
-    .plus{
-        width: 8.3333vw;
-        height: 8.3333vw;
-        margin: 0 auto;
-        margin-bottom: 2.7778vw;
-    }
-    .file_text{text-align: center; font-size: 3.8889vw;}
-    .input_text_area{padding: 5.5556vw; border: 1px solid #E0E0E0; max-width: 91.1111vw; width: 100%;
-        font-size: 4.4444vw; line-height: 6.6667vw; box-sizing: border-box; border-radius: 2.2222vw; height: 44.4444vw;
-    }
-    textarea{font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;}
-    textarea:focus{
-        border-color: #000;
-        outline: none;
-    }
-    input:focus{
-        border-bottom: 1px solid #000;
-        outline: none;
-    }
-    .textarea_wrap{position: relative; margin: 2.7778vw 0;}
-    .text_length{
-        position: absolute;
-        font-size: 3.8889vw;
-        right: 5.5556vw;
-        bottom: 5.5556vw;
-    }
-    .sum_btn{
-        line-height: 7.2222vw;
-        padding: 3.3333vw 8.8889vw;
-        background: #84C13D;
-        color: #fff;
-        font-size: 4.7222vw;
-        border-radius: 0px !important;
-        height: 13.8889vw;
-        pointer-events: initial;
-        text-align: center;
-    }
-    .sum_btn.off{opacity: 0.6; pointer-events: none;}
-    .fade_img{max-width: 44.4444vw; width: 100%; height: 44.4444vw;position: absolute; right: 0; top: 0;}
-    .add_btn{position: relative; background: #f1f1f1; max-width: 91.1111vw; width: 100%; font-size: 3.8889vw; line-height: 5.5556vw; border-radius: 2.7778vw; padding: 2.7778vw 32.3611vw 2.7778vw  37.3611vw; text-align: center; margin: 0 auto;}
-    .add_btn_img{max-width: 3.3333vw; width: 100%; position: absolute;
-    left: 32.7778vw;
-    top: 3.3333vw;}
-    .add_btn_wrap{padding-bottom: 13.8889vw; }
-    .add_btn_wrap .text{
-        font-size: 3.3333vw; line-height: 5vw; color: #999; text-align: center; margin-top: 4.4444vw;
-    }
-    .popup_back{display: none;}
-    .popup_back_on{display: block; background: #000; position: fixed; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.6;}
-    .popup_wrap{position: fixed; top: 200%; left: 0; transition: all 0.4s ease-in; width: 100%; background: #fff; border-top-left-radius: 5.5556vw; border-top-right-radius: 5.5556vw; transform: translateY(-100%);}
-    .popup_btn_text{padding-bottom: 11.1111vw}
-    .popup_btn_text h4{color: #333; font-size: 4.7222vw; line-height: 7.2222vw; text-align: center; margin: 7.2222vw 4.4444vw;}
-    .popup_btn_text p{position: relative; color: #999; font-size: 3.8889vw; line-height: 5.5556vw; padding-left: 2.2222vw; margin: 0 4.4444vw; margin-bottom: 1.6667vw;}
-    .popup_btn_text p:last-of-type{margin-bottom: 5.5556vw;}
-    .popup_btn_text p::before{content: ''; display: block; background: #999; width: 0.5556vw; height: 0.5556vw; position: absolute; top: 2.7778vw; left: 0.2778vw;}
-    .popup_stroke{margin: 5.5556vw; width: 88.8889vw; height: 0.2778vw; background: #E0E0E0;}
-    .check_box{padding: 4.4444vw; display: flex; border: 0.2778vw solid #F0F0F0; border-radius: 2.7778vw; margin: 0 5.5556vw;}
-    .check_box.check_box_on{border-color: #84C13D;}
-    .check_box_img{width: 5vw; height: 5vw; margin-right: 1.6667vw;}
-    .check_box_img_on{display: none;}
-    .popup_btn_wrap{display: flex; position: relative;}
-    .popup_btn{line-height: 7.2222vw; font-size: 4.7222vw; text-align: center; padding: 3.3333vw 0;}
-    .btn_cancel{width: 30%; color: #333; background: #E0E0E0;}
-    .btn_okay{width: 70%; background: #84C13D; color: #fff;}
-    .btn_fade{position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 70%;
-    height: 100%;
-    background: #fff;
-    opacity: 0.6;
-    display: block;
-}
-    /* .add_btn_text::before{ display: block; content: ''; width: 3.3333vw; height: 3.3333vw; background: url(img/ndsw_icon_plus04_h12.png);} */
-    </style>
+    <link rel="stylesheet" href="css/input.css">
+  
 </head>
 <body>
     <div class="wrap">
@@ -206,7 +50,7 @@
                         <div class="fade_img">
                             <img src="img/ndsw_img_delet.png" alt="">
                         </div>
-                        <div class="plus"><img src="img/ndsw_icon_upload_plus.png" alt=""></div>
+                        <div class="plus"><img src="img/ndsw_icon_plus04_h12.png" alt=""></div>
                         <div class="file_text">
                             출품작<br>
                             (사진촬영/스캔)
@@ -215,7 +59,7 @@
 
                     <input type="file" name="file" id="file2">
                     <label for="file2" class="file_btn">
-                        <div class="plus"><img src="img/ndsw_icon_upload_plus.png" alt=""></div>
+                        <div class="plus"><img src="img/ndsw_icon_plus04_h12.png" alt=""></div>
                         <div class="file_text">
                             자녀가 작품을<br>
                             그리고 있는 사진
@@ -282,88 +126,7 @@
     </div>
 
 
-    <script>
-
-        const check_box = document.querySelector('.check_box');
-        const check_box_img_off = document.querySelector('.check_box_img_off');
-        const check_box_img_on = document.querySelector('.check_box_img_on');
-        const btn_okay = document.querySelector('.btn_okay');
-        const btn_fade = document.querySelector('.btn_fade');
-        const popup_back = document.querySelector('.popup_back');
-        const popup = document.querySelector('.popup_wrap');
-        const sum_btn = document.querySelector('.sum_btn');
-        
-        console.log(popup.offsetHeight)
-
-        sum_btn.addEventListener('click',function(){
-            popup_back.classList.add('popup_back_on');
-            popup.style.top = 100 + '%'
-
-        });
-
-        check_box.addEventListener('click',function(){
-            if(check_box.classList.contains('check_box_on')){
-                check_box.classList.remove('check_box_on');
-                check_box_img_off.style.display = 'block';
-                check_box_img_on.style.display = 'none';
-                btn_fade.style.display = 'block'
-
-
-            }else{
-                check_box.classList.add('check_box_on');
-                check_box_img_off.style.display = 'none';
-                check_box_img_on.style.display = 'block';
-                btn_fade.style.display = 'none'
-
-            }
-        });
-
-
-
-        // 계좌번호 최대숫자 제한 부분
-//         function maxLengthCheck(object){
-//             if (object.value.length > object.maxLength){
-//                 object.value = object.value.slice(0, object.maxLength);
-//     }
-// }
-
-
-// textarea height값 변환 부분
-// const DEFAULT_HEIGHT = 30; // textarea 기본 height
-
-// const textarea = document.querySelector('.text-area');
-
-// textarea.oninput = (event) => {
-//   const target = event.target;
-
-//   target.style.height = 0;
-//   target.style.height =  target.scrollHeight + 'px';
-// };
-
-
-
-// 계좌번호 포커스 부분
-// const first = document.querySelector('.account_number_first');
-// const second = document.querySelector('.account_number_second');
-// const third = document.querySelector('.account_number_third');
-
-
-// first.addEventListener('keyup', function(){
-//     if(first.value.length == first.maxLength){
-//         second.focus();
-//     }    
-// })
-
-// second.addEventListener('keyup', function(){
-//     if(this.value.length == this.maxLength){
-//         third.focus();
-//     }
-    
-// })
-
-
-
-    </script>
+<script src="js/input.js"></script>
 
   
 </body>

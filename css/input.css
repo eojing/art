@@ -19,7 +19,7 @@ label span{font-size: 2.7778vw;font-weight: normal;}
 
 input[type=file]{display: none;}
 .file_box{display: flex; justify-content: space-between; margin-top: 2.7778vw;}
-.file_btn{display: block;position: relative;padding: 11.1111vw 2.7778vw;max-width: 44.4444vw;width: 100%;color: #666666;border: 0.2778vw solid #e0e0e0;border-radius: 2.2222vw;}
+.file_btn{display: block;position: relative;max-width: 44.4444vw;width: 100%;color: #666666;border: 0.2778vw solid #e0e0e0;border-radius: 2.2222vw;}
 
 .plus{width: 8.3333vw;height: 8.3333vw;margin: 0 auto;margin-bottom: 2.7778vw;}
 .file_text{text-align: center; font-size: 3.8889vw;}.input_text_area{padding: 5.5556vw; border: 1px solid #E0E0E0; max-width: 91.1111vw; width: 100%;font-size: 4.4444vw; line-height: 6.6667vw; box-sizing: border-box; border-radius: 2.2222vw; height: 44.4444vw;}
@@ -53,3 +53,6 @@ input:focus{border-bottom: 1px solid #000;outline: none;}
 .btn_cancel{width: 30%; color: #333; background: #E0E0E0;}
 .btn_okay{width: 70%; background: #84C13D; color: #fff;}
 .btn_fade{position: absolute;right: 0;bottom: 0;width: 70%;height: 100%;background: #fff;opacity: 0.6;display: block;}
+.upload_img{position: absolute; height: 100%;}
+.upload_img img{height: 100%;}
+.label_text{padding: 11.1111vw 2.7778vw;}

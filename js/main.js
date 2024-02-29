@@ -8,12 +8,20 @@ const sub_tab_list = document.querySelectorAll('.sub_tab_list');
 const swiper_content = document.querySelectorAll('.swiper');
 const accordion = document.querySelectorAll('.accordion li');
 const stroke = document.querySelectorAll('.stroke');
-const bottom_btn = document.querySelector('.fixed_btn');
+const bottom_btn = document.querySelectorAll('.fixed_btn');
 
 const arrow_down = document.querySelectorAll('.arrow_down');
 const arrow_up = document.querySelectorAll('.arrow_up');
 
 
+const fixed_btn_bg = document.querySelector('.fixed_btn_bg');
+const fixed_top = document.querySelector('.fixed_top')
+
+
+fixed_top.addEventListener('click',function(e){
+    e.preventDefault();
+    window.scrollTo({top : 0, behavior: 'smooth'});
+});
 
 for(let i = 0; i< tab_list.length; i++){
 
@@ -29,9 +37,13 @@ window.addEventListener('scroll', function(){
             tab_list[1].classList.remove('on');
             tab_list[2].classList.remove('on');
             tab_list[0].classList.add('on');
-            bottom_btn.classList.add('fixed_on');
+            bottom_btn[0].classList.add('fixed_on');
+            bottom_btn[1].classList.add('fixed_on');
+            fixed_btn_bg.classList.add('fixed_on');
         } else{
-            bottom_btn.classList.remove('fixed_on');
+            bottom_btn[0].classList.remove('fixed_on');
+            bottom_btn[1].classList.remove('fixed_on');
+            fixed_btn_bg.classList.remove('fixed_on');
         }
         if(window.scrollY >= content_list[1].offsetTop - tab.offsetHeight){
             tab_list[0].classList.remove('on');

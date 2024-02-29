@@ -3,7 +3,7 @@ html, body{font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkM
 img{width: 100%; display: block;}
 .wrap{line-height: 5.5556vw;}
 
-.tab{display: flex;justify-content: center;top: 0;left: 0;background: #fff;border-bottom: 0.2778vw solid #999;}
+.tab{display: flex;justify-content: center;top: 0;left: 0;background: #fff;border-bottom: 0.2778vw solid #e0e0e0;}
 .fade{background: rgb(255,255,255);background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);}
 
 .tab_wrap{position: sticky;top: 0;left: 0;-ms-overflow-style: none; /* IE and Edge */scrollbar-width: none; /* Firefox */z-index: 10;}
@@ -14,7 +14,7 @@ img{width: 100%; display: block;}
 
 
 
-.tab_wrap .on{color: #000;border-bottom: 0.2778vw solid #000;margin-bottom: -0.2778vw;}
+.tab_wrap .on{color: #000;border-bottom: 0.2778vw solid #000; margin-bottom: -0.2778vw;}
 
 
 

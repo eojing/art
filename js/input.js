@@ -8,8 +8,47 @@ const popup_back = document.querySelector('.popup_back');
 const popup = document.querySelector('.popup_wrap');
 const sum_btn = document.querySelector('.sum_btn');
 const btn_cancel = document.querySelector('.btn_cancel');
+const add_btn1 = document.querySelector('.add_btn1');
+const add_btn2 = document.querySelector('.add_btn2');
+const add_btn_img = document.querySelector('.add_btn_img');
+const add_btn_arrow_up = document.querySelector('.add_btn_arrow_up');
+const add_btn_arrow_down = document.querySelector('.add_btn_arrow_down');
+const input_box1 = document.querySelector('.input_box1');
+const input_box2 = document.querySelector('.input_box2');
+const kid_delete = document.querySelector('.kid_delete');
 
-console.log(popup.offsetHeight)
+
+add_btn1.addEventListener('click',function(){
+    this.style.display = 'none';
+    add_btn2.style.display = 'flex';
+    input_box1.classList.add('mH0');
+    input_box2.classList.add('mH100');
+});
+
+kid_delete.addEventListener('click',function(){
+    add_btn1.style.display = 'flex';
+    add_btn2.style.display = 'none';
+    if(input_box2.classList.contains('mH100')){
+        input_box2.classList.remove('mH100');
+    }
+    if(input_box1.classList.contains('mH0')){
+        input_box1.classList.add('mH100');
+    }
+});
+
+add_btn2.addEventListener('click',function(){
+    add_btn_arrow_down.classList.toggle('btn_on');
+    add_btn_arrow_up.classList.toggle('btn_on');
+    
+    if(add_btn_arrow_down.classList.contains('btn_on')){
+        input_box1.classList.remove('mH100');
+        input_box1.classList.add('mH0');
+    }else{
+        input_box1.classList.remove('mH0');
+        input_box1.classList.add('mH100');
+    }
+})
+
 
 sum_btn.addEventListener('click',function(){
     popup_back.classList.add('popup_back_on');

@@ -74,6 +74,7 @@ input, textarea {appearance: none;-webkit-appearance: none;-webkit-border-radius
 
 
 /* margin */
+.m0{margin: 0;}
 .m1{margin: 0.2778vw;}
 .m2{margin: 0.5556vw;}
 .m3{margin: 0.8333vw;}
@@ -92,6 +93,7 @@ input, textarea {appearance: none;-webkit-appearance: none;-webkit-border-radius
 .m40{margin: 11.1111vw;}
 
 /* margin-top */
+.mt0{margin-top: 0;}
 .mt1{margin-top: 0.2778vw;}
 .mt2{margin-top: 0.5556vw;}
 .mt3{margin-top: 0.8333vw;}
@@ -112,6 +114,7 @@ input, textarea {appearance: none;-webkit-appearance: none;-webkit-border-radius
 
 
 /* margin-right */
+.mr0{margin-right: 0;}
 .mr1{margin-right: 0.2778vw;}
 .mr2{margin-right: 0.5556vw;}
 .mr3{margin-right: 0.8333vw;}
@@ -131,6 +134,7 @@ input, textarea {appearance: none;-webkit-appearance: none;-webkit-border-radius
 
 
 /* margin-bottom */
+.mb0{margin-bottom: 0;}
 .mb1{margin-bottom: 0.2778vw;}
 .mb2{margin-bottom: 0.5556vw;}
 .mb3{margin-bottom: 0.8333vw;}
@@ -152,6 +156,7 @@ input, textarea {appearance: none;-webkit-appearance: none;-webkit-border-radius
 
 
 /* margin-left */
+.ml0{margin-left: 0;}
 .ml1{margin-left: 0.2778vw;}
 .ml2{margin-left: 0.5556vw;}
 .ml3{margin-left: 0.8333vw;}
@@ -171,6 +176,7 @@ input, textarea {appearance: none;-webkit-appearance: none;-webkit-border-radius
 
 
 /* padding */
+.p0{padding: 0;}
 .p1{padding: 0.2778vw;}
 .p2{padding: 0.5556vw;}
 .p3{padding: 0.8333vw;}
@@ -190,6 +196,7 @@ input, textarea {appearance: none;-webkit-appearance: none;-webkit-border-radius
 
 
 /* padding-top */
+.pt0{padding-top: 0;}
 .pt1{padding-top: 0.2778vw;}
 .pt2{padding-top: 0.5556vw;}
 .pt3{padding-top: 0.8333vw;}
@@ -209,6 +216,7 @@ input, textarea {appearance: none;-webkit-appearance: none;-webkit-border-radius
 
 
 /* padding-right */
+.pr0{padding-right: 0;}
 .pr1{padding-right: 0.2778vw;}
 .pr2{padding-right: 0.5556vw;}
 .pr3{padding-right: 0.8333vw;}
@@ -228,6 +236,7 @@ input, textarea {appearance: none;-webkit-appearance: none;-webkit-border-radius
 
 
 /* padding-bottom */
+.pb0{padding-bottom: 0;}
 .pb1{padding-bottom: 0.2778vw;}
 .pb2{padding-bottom: 0.5556vw;}
 .pb3{padding-bottom: 0.8333vw;}
@@ -247,6 +256,7 @@ input, textarea {appearance: none;-webkit-appearance: none;-webkit-border-radius
 
 
 /* padding-left */
+.pl0{padding-left: 0;}
 .pl1{padding-left: 0.2778vw;}
 .pl2{padding-left: 0.5556vw;}
 .pl3{padding-left: 0.8333vw;}

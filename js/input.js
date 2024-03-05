@@ -16,6 +16,7 @@ const add_btn_arrow_down = document.querySelector('.add_btn_arrow_down');
 const input_box1 = document.querySelector('.input_box1');
 const input_box2 = document.querySelector('.input_box2');
 const kid_delete = document.querySelector('.kid_delete');
+const input_tag = document.querySelectorAll('.input_tag');
 
 
 add_btn1.addEventListener('click',function(){
@@ -23,11 +24,18 @@ add_btn1.addEventListener('click',function(){
     add_btn2.style.display = 'flex';
     input_box1.classList.add('mH0');
     input_box2.classList.add('mH100');
+    kid_delete.style.display = 'block';
+    input_box2.style.marginTop = 8.3333 + 'vw';
+    input_tag[0].innerHTML = "자녀1 성명"
+    input_tag[1].innerHTML = "자녀1 계좌번호 (참여상 혜택 지급용)"
 });
 
 kid_delete.addEventListener('click',function(){
     add_btn1.style.display = 'flex';
     add_btn2.style.display = 'none';
+    this.style.display = 'none';
+    input_tag[0].innerHTML = "자녀 성명"
+    input_tag[1].innerHTML = "자녀 계좌번호 (참여상 혜택 지급용)"
     if(input_box2.classList.contains('mH100')){
         input_box2.classList.remove('mH100');
     }

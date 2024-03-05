@@ -1,46 +1,60 @@
 html, body{font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;font-weight: 400;}
-img{width: 100%; display: block;}
 
 .wrap{position: relative; margin-top: 5.5556vw;}
 
+/* input_box */
 .input_box_wrap{overflow: hidden; transition: all 0.2s ease-in; max-width: 100vh;}
 .input_box{padding : 0 4.4444vw 8.3333vw;}
-.input_box2{margin-top: 8.3333vw; max-height: 0vh; overflow: hidden;}
+.input_box2{max-height: 0vh; overflow: hidden;}
 .input_tag{position: relative;display: inline-block;margin-bottom: 0.5556vw;}
 .input_tag::after{content: ''; display: block; position: absolute; background: url(../img/ndsw_icon_ess_h10.png); width: 2.9639vw; height:2.9639vw; background-size: contain;right: -2.7778vw;top: 0;}
+input[type="text"]{display: block;-webkit-appearance: none;width: 100%;border: none;border-bottom: 1px solid #E0E0E0;padding: 2.2222vw 0;color: #000;}
+input[type="text"]::placeholder{color: #C5C5C5; font-weight: 400 !important;}
+input:focus{border-bottom: 1px solid #000;outline: none; font-family: "Pretendard Variable", Pretendard !important;}
 
-input[type="text"]{display: block;-webkit-appearance: none;width: 100%;border: none;border-bottom: 1px solid #E0E0E0;padding: 2.2222vw 0;color: #000;font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;}
-input[type="text"]::placeholder{color: #C5C5C5; font-weight: 300 !important;}
 
-
+/* input_[type="radio"] */
 .radio_box{display: flex;justify-content: space-between; margin-top: 2.7778vw;}
-.age_btn{display: inline-block;text-align: center;padding: 2.3611vw 0;border: 0.2778vw solid #e0e0e0;border-radius: 8px;max-width: 28.8889vw;width: 100%;line-height: 4.1667vw;}
 .age_input{display: none;}
+.age_btn{display: inline-block;text-align: center;padding: 2.3611vw 2.7778vw;border: 0.2778vw solid #e0e0e0;border-radius: 8px;max-width: 28.8889vw;width: 100%;line-height: 4.1667vw;}
 .age_input:checked + label{border: 0.2778vw solid #000; font-weight: 700;}
 .age_input:checked + label span{font-weight: 700;}
 
-
+/* input[type="file"] */
 input[type=file]{display: none;}
 .file_box{display: flex; justify-content: space-between; margin-top: 2.7778vw;}
 .file_btn{display: block;position: relative;max-width: 44.4444vw;width: 100%;color: #666666;border: 0.2778vw solid #e0e0e0;border-radius: 2.2222vw;}
-
 .plus{width: 8.3333vw;height: 8.3333vw;margin: 0 auto;margin-bottom: 2.7778vw;}
 .file_text{text-align: center;}
+.upload_img{position: absolute; height: 100%;}
+.upload_img img{height: 100%;}
+
+
+/* text-area */
 .input_text_area{padding: 5.5556vw; border: 1px solid #E0E0E0; max-width: 91.1111vw; width: 100%;box-sizing: border-box; border-radius: 2.2222vw; height: 44.4444vw;}
-textarea{font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;}
 textarea:focus{border-color: #000;outline: none;}
-input:focus{border-bottom: 1px solid #000;outline: none;}
+textarea::placeholder{font-weight: 400 !important;}
 .textarea_wrap{position: relative; margin: 2.7778vw 0 0;}
 .text_length{position: absolute;right: 5.5556vw;bottom: 5.5556vw;}
+.label_text{padding: 11.1111vw 2.7778vw;}
+
+/* bottom_btn */
 .sum_btn{line-height: 7.2222vw;padding: 3.3333vw 8.8889vw;background: #84C13D;color: #fff;border-radius: 0px !important;height: 13.8889vw;pointer-events: initial;text-align: center;}
 .sum_btn.off{opacity: 0.6; pointer-events: none;}
 .fade_img{max-width: 44.4444vw; width: 100%; height: 44.4444vw;position: absolute; right: 0; top: 0;}
+
+/* add_btn */
+.add_btn_wrap{padding-bottom: 13.8889vw; }
 .add_btn{display: flex; justify-content: center; align-items: center; position: relative; background: #f1f1f1; max-width: 91.1111vw; width: 100%; border-radius: 2.7778vw; padding: 2.7778vw 0; text-align: center; margin: 0 auto 2.7778vw;}
 .add_btn2{display: none;}
-.kid_delete{background: #fff; border: 0.2778vw solid #E0E0E0;}
 .add_btn_img{ max-width: 3.3333vw; width: 100%; margin-right: 1.6667vw; }
-.add_btn_wrap{padding-bottom: 13.8889vw; }
 .add_btn_wrap .text{color: #999; text-align: center;}
+.kid_delete{display: none; background: #fff; border: 0.2778vw solid #E0E0E0;}
+.add_btn_arrow_up, .add_btn_arrow_down{max-width: 3.3333vw; width: 100%; margin-left: 1.6667vw; display: none;}
+.btn_on{display: block;}
+
+
+/* popup */
 .popup_back{display: none;}
 .popup_back_on{display: block; background: #000; position: fixed; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.6;}
 .popup_wrap{position: fixed; top: 200%; left: 0; transition: all 0.4s ease-in; width: 100%; background: #fff; border-top-left-radius: 5.5556vw; border-top-right-radius: 5.5556vw; transform: translateY(-100%);}
@@ -59,10 +73,5 @@ input:focus{border-bottom: 1px solid #000;outline: none;}
 .btn_cancel{width: 30%; color: #333; background: #E0E0E0;}
 .btn_okay{width: 70%; background: #84C13D; color: #fff;}
 .btn_fade{position: absolute;right: 0;bottom: 0;width: 70%;height: 100%;background: #fff;opacity: 0.6;display: block;}
-.upload_img{position: absolute; height: 100%;}
-.upload_img img{height: 100%;}
-.label_text{padding: 11.1111vw 2.7778vw;}
-.add_btn_arrow_up, .add_btn_arrow_down{max-width: 3.3333vw; width: 100%; margin-left: 1.6667vw; display: none;}
-.btn_on{display: block;}
 .mH0{max-height: 0vh;}
 .mH100{max-height: 100vh;}

@@ -38,11 +38,11 @@ window.addEventListener('scroll', function(){
             tab_list[2].classList.remove('on');
             tab_list[0].classList.add('on');
             bottom_btn[0].classList.add('fixed_on');
-            bottom_btn[1].classList.add('fixed_on');
+            // bottom_btn[1].classList.add('fixed_on');
             fixed_btn_bg.classList.add('fixed_on');
         } else{
             bottom_btn[0].classList.remove('fixed_on');
-            bottom_btn[1].classList.remove('fixed_on');
+            // bottom_btn[1].classList.remove('fixed_on');
             fixed_btn_bg.classList.remove('fixed_on');
         }
         if(window.scrollY >= content_list[1].offsetTop - tab.offsetHeight){

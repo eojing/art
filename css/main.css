@@ -74,6 +74,7 @@ table tr:last-child td{border-bottom: none;}
 .FAQ_wrap{text-align: center; margin-bottom: 5.5556vw;}
 .FAQ_wrap .FAQ_tag{background: #0054C4; color: #fff; display: inline-block; padding: 1.1111vw 4.4444vw; border-radius: 27.5vw;}
 .FAQ_{display: block; background: #4E5255; padding: 2.7778vw 17.6389vw; border-radius: 2.2222vw;}
+.FAQ_btn{display: block; max-width: 77.7778vw; padding: 2.7778vw 0; text-align: center; border-radius: 2.2222vw;}
 
 /* accordion */
 .accordion li{padding: 5.5556vw; border-radius: 2.7778vw; background: #fff; overflow: hidden; height: 100%; transition: all 0.4s ease-in-out; max-height: 16.6667vw; margin-bottom: 2.7778vw;}

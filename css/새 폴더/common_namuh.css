@@ -66,12 +66,6 @@ input, textarea {appearance: none;-webkit-appearance: none;-webkit-border-radius
 .fwm{font-weight: 500;}
 .fwb{font-weight: 700;}
 
-/* display */
-.dn{display: none;}
-.db{display: block;}
-.di{display: inline;}
-.dib{display: inline-block;}
-.df{display: flex;}
 
 /* line-height */
 .lhn{line-height: normal;}
@@ -363,7 +357,8 @@ input[type="text"]::placeholder{color: #C5C5C5;}
 
 
 /* button */
-.btn{}
+.btn{display: block; padding: 3.3333vw 8.8889vw; background: #E0E0E0; color: #333;}
+.btn_nm{display: block; padding: 3.3333vw 8.8889vw; background: #84C13D; color: #fff;}
 
 
 

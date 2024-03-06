@@ -1,14 +1,7 @@
-html, body{font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;font-weight: 400;}
-
 /* 상단 흰색부분 */
 .result_bg{background: #fdf6d9; width: 100%; height: 100px; position: absolute; z-index: -1;}
 .content_wrap{position: relative; }
 .border_round{border-top-left-radius: 8.3333vw; border-top-right-radius: 8.3333vw; background: #fff;}
-
-
-
-
-
 
 
 /* 대상 */
@@ -39,7 +32,6 @@ html, body{font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkM
 
 /* swiper 영역 (수정필요할수도 있음) */
 .swiper-slide{width: 88.8889vw;margin: 0 auto;}
-.swiper-text{text-align: center;margin-top: 2.7778vw;font-size: 4.4444vw;font-weight: bold;}
 .swiper-pagination{padding : 5.5556vw 0 11.1111vw;}
 .swiper-pagination-bullet{width: 1.6667vw;height: 1.6667vw;background: #B6B7B8;}
 .swiper-pagination-bullet-active{background: #2C363B;width: 3.3333vw;}
@@ -48,5 +40,3 @@ html, body{font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkM
 .decoration{width: 11.6667vw;position: absolute;bottom: 24%;right: 8%;}
 .decoration img{filter: drop-shadow(0.5556vw 2.7778vw 2.7778vw rgb(0, 0, 0, 0.2));}
 .swiper-img img{box-shadow: 0 1.1111vw 5.5556vw 0 rgba(0, 0, 0, 0.3);}
-.art_title{font-size: 4.7222vw; line-height: 7.2222vw;}
-.kid_name{font-size: 3.8889vw; line-height: 5.5556vw; font-weight: 400;color: #666;}

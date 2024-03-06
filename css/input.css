@@ -6,7 +6,7 @@ html, body{font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkM
 .input_box_wrap{overflow: hidden; transition: all 0.2s ease-in; max-width: 100vh;}
 .input_box{padding : 0 4.4444vw 8.3333vw;}
 .input_box2{max-height: 0vh; overflow: hidden;}
-.input_tag{position: relative;display: inline-block;margin-bottom: 0.5556vw;}
+.input_tag{position: relative;display: inline-block;}
 .input_tag::after{content: ''; display: block; position: absolute; background: url(../img/ndsw_icon_ess_h10.png); width: 2.9639vw; height:2.9639vw; background-size: contain;right: -2.7778vw;top: 0;}
 input[type="text"]{display: block;-webkit-appearance: none;width: 100%;border: none;border-bottom: 1px solid #E0E0E0;padding: 2.2222vw 0;color: #000;}
 input[type="text"]::placeholder{color: #C5C5C5; font-weight: 400 !important;}
@@ -16,7 +16,7 @@ input:focus{border-bottom: 1px solid #000;outline: none; font-family: "Pretendar
 /* input_[type="radio"] */
 .radio_box{display: flex;justify-content: space-between; margin-top: 2.7778vw;}
 .age_input{display: none;}
-.age_btn{display: inline-block;text-align: center;padding: 2.3611vw 2.7778vw;border: 0.2778vw solid #e0e0e0;border-radius: 8px;max-width: 28.8889vw;width: 100%;line-height: 4.1667vw;}
+.age_btn{display: inline-block;text-align: center;padding: 2.3611vw 2.7778vw;border: 0.2778vw solid #e0e0e0;border-radius: 8px;max-width: 28.8889vw;width: 100%;}
 .age_input:checked + label{border: 0.2778vw solid #000; font-weight: 700;}
 .age_input:checked + label span{font-weight: 700;}
 
@@ -39,7 +39,7 @@ textarea::placeholder{font-weight: 400 !important;}
 .label_text{padding: 11.1111vw 2.7778vw;}
 
 /* bottom_btn */
-.sum_btn{line-height: 7.2222vw;padding: 3.3333vw 8.8889vw;background: #84C13D;color: #fff;border-radius: 0px !important;height: 13.8889vw;pointer-events: initial;text-align: center;}
+.sum_btn{padding: 3.3333vw 8.8889vw;background: #84C13D;color: #fff;border-radius: 0px !important;height: 13.8889vw;pointer-events: initial;text-align: center;}
 .sum_btn.off{opacity: 0.6; pointer-events: none;}
 .fade_img{max-width: 44.4444vw; width: 100%; height: 44.4444vw;position: absolute; right: 0; top: 0;}
 

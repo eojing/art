@@ -69,14 +69,12 @@ check_box.addEventListener('click',function(){
         check_box.classList.remove('check_box_on');
         check_box_img_off.style.display = 'block';
         check_box_img_on.style.display = 'none';
-        btn_fade.style.display = 'block'
-
-
+        btn_okay.classList.add('off')
     }else{
         check_box.classList.add('check_box_on');
         check_box_img_off.style.display = 'none';
         check_box_img_on.style.display = 'block';
-        btn_fade.style.display = 'none'
+        btn_okay.classList.remove('off')
 
     }
 });

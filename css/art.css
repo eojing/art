@@ -92,7 +92,7 @@ table tr:last-child td{border-bottom: none;}
 
 /* btn */
 .btn_meta{background: #fff; text-decoration: none; position: absolute; left: 50%;transform: translateX(-50%); max-width: 63.3333vw; width: 100%; top: 71.5%; display: block; text-align: center; border-radius: 2.7778vw; padding: 2.7778vw 0; color: #000;}
-.btn_main{max-width: 88.8889vw; width: 100%; position: absolute; border-radius: 3.3333vw; bottom: 6%; left: 50%; transform: translateX(-50%); background: #16171B; padding: 3.6111vw 32.3611vw;}
+.btn_main{max-width: 88.8889vw; width: 100%; position: absolute; border-radius: 3.3333vw; bottom: 6%; left: 50%; transform: translateX(-50%); background: #16171B; padding: 3.6111vw 0;}
 
 /* fixed_btn */
 .fixed_btn{position: fixed; bottom: 5.5556vw; z-index: 100; transition: all 0.2s ease-in; opacity: 0; pointer-events: none;}

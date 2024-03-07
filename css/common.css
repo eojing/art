@@ -438,7 +438,7 @@ input[type=file]{display: none;}
 /* text-area */
 .input_text_area{padding: 5.5556vw; border: 1px solid #E0E0E0; max-width: 91.1111vw; width: 100%;box-sizing: border-box; border-radius: 2.2222vw; height: 44.4444vw;}
 textarea:focus{border-color: #000;outline: none;}
-textarea::placeholder{font-weight: 400 !important;}
+textarea::placeholder{font-weight: 400 !important; color: #C5C5C5;}
 .textarea_wrap{position: relative; margin: 2.7778vw 0 0;}
 .text_length{position: absolute;right: 5.5556vw;bottom: 5.5556vw;}
 .label_text{padding: 11.1111vw 2.7778vw;}

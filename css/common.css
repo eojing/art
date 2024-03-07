@@ -185,6 +185,7 @@ input, textarea {appearance: none;-webkit-appearance: none;-webkit-border-radius
 .mr9{margin-right: 2.5vw;}
 .mr10{margin-right: 2.7778vw;}
 .mr15{margin-right: 4.1667vw;}
+.mr16{margin-right: 4.4444vw;}
 .mr20{margin-right: 5.5556vw;}
 .mr25{margin-right: 6.9444vw;}
 .mr30{margin-right: 8.3333vw;}
@@ -227,6 +228,7 @@ input, textarea {appearance: none;-webkit-appearance: none;-webkit-border-radius
 .ml9{margin-left: 2.5vw;}
 .ml10{margin-left: 2.7778vw;}
 .ml15{margin-left: 4.1667vw;}
+.ml16{margin-left: 4.4444vw;}
 .ml20{margin-left: 5.5556vw;}
 .ml25{margin-left: 6.9444vw;}
 .ml30{margin-left: 8.3333vw;}
@@ -400,9 +402,7 @@ input, textarea {appearance: none;-webkit-appearance: none;-webkit-border-radius
 .popup_back_on{display: block; background: #000; position: fixed; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.6;}
 .popup_wrap{position: fixed; top: 200%; left: 0; transition: all 0.4s ease-in; width: 100%; background: #fff; border-top-left-radius: 5.5556vw; border-top-right-radius: 5.5556vw; transform: translateY(-100%);}
 .popup_btn_text{padding-bottom: 11.1111vw}
-.popup_btn_text p{position: relative; color: #999; padding-left: 2.2222vw; margin: 0 4.4444vw; margin-bottom: 1.6667vw;}
-.popup_btn_text p:last-of-type{margin-bottom: 5.5556vw;}
-.popup_btn_text p::before{content: ''; display: block; background: #999; width: 0.5556vw; height: 0.5556vw; position: absolute; top: 2.7778vw; left: 0.2778vw;}
+.popup_btn_text p::before{content: ''; display: block; background: #666; border-radius: 50%; width: 0.5556vw; height: 0.5556vw; position: absolute; top: 2.7778vw; left: 0.2778vw;}
 .popup_stroke{ height: 0.2778vw; background: #E0E0E0;}
 .check_box{padding: 4.4444vw; display: flex; border: 0.2778vw solid #F0F0F0; border-radius: 2.7778vw; margin: 0 5.5556vw;}
 .check_box.check_box_on{border-color: #84C13D;}
@@ -457,7 +457,7 @@ input[type=file]{display: none;}
 .plus{width: 8.3333vw;height: 8.3333vw;margin: 0 auto;margin-bottom: 2.7778vw;}
 .file_text{text-align: center;}
 .upload_img{position: absolute; height: 100%;}
-.upload_img img{height: 100%;}
+.upload_img img{height: 100%; border-radius: 2.2222vw;}
 .fade_img{max-width: 44.4444vw; width: 100%; height: 44.4444vw;position: absolute; right: 0; top: 0;}
 
 

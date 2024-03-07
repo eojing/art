@@ -52,7 +52,7 @@ for(let i = 0; i< tab_list.length; i++){
 }
 
 window.addEventListener('scroll', function(){
-        if( window.scrollY >= content_list[0].offsetTop - tab.offsetHeight){
+        if( window.scrollY >= window.pageYOffset + content_list[0].getBoundingClientRect().top - tab.offsetHeight){
             tab_list[1].classList.remove('on');
             tab_list[2].classList.remove('on');
             tab_list[0].classList.add('on');
@@ -64,12 +64,12 @@ window.addEventListener('scroll', function(){
             // bottom_btn[1].classList.remove('fixed_on');
             fixed_btn_bg.classList.remove('fixed_on');
         }
-        if(window.scrollY >= content_list[1].offsetTop - tab.offsetHeight){
+        if(window.scrollY >= window.pageYOffset + content_list[1].getBoundingClientRect().top - tab.offsetHeight){
             tab_list[0].classList.remove('on');
             tab_list[2].classList.remove('on');
             tab_list[1].classList.add('on');
         }
-        if(window.scrollY >= content_list[2].offsetTop - tab.offsetHeight){
+        if(window.scrollY >= window.pageYOffset + content_list[2].getBoundingClientRect().top - tab.offsetHeight){
             tab_list[0].classList.remove('on');
             tab_list[1].classList.remove('on');
             tab_list[2].classList.add('on');

@@ -88,6 +88,7 @@ table tr:last-child td{border-bottom: none;}
 .stroke_on{background: #F0F0F0;}
 .arrow_up{display: none;}
 .ex_img{max-width: 77.7778vw; width: 100%;}
+.ws{word-spacing: -0.1389vw;}
 
 
 /* btn */

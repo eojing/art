@@ -26,15 +26,11 @@ fixed_top.addEventListener('click',function(e){
 
 
 
-window.addEventListener('scroll', function(){
-    console.log(this.scrollY)
-})
-
 const visual_top = document.querySelector('.visual').offsetHeight + tab_wrap.offsetHeight + 'px';
 
-console.log(window.pageYOffset + content_list[0].getBoundingClientRect().top);
-console.log(window.pageYOffset + content_list[1].getBoundingClientRect().top);
-console.log(window.pageYOffset + content_list[2].getBoundingClientRect().top);
+// console.log(window.pageYOffset + content_list[0].getBoundingClientRect().top);
+// console.log(window.pageYOffset + content_list[1].getBoundingClientRect().top);
+// console.log(window.pageYOffset + content_list[2].getBoundingClientRect().top);
 
 // console.log(content_list[0].offsetTop);
 // console.log(content_list[1].getBoundingClientRect().top);
@@ -52,7 +48,7 @@ for(let i = 0; i< tab_list.length; i++){
 }
 
 window.addEventListener('scroll', function(){
-        if( window.scrollY >= window.pageYOffset + content_list[0].getBoundingClientRect().top - tab.offsetHeight){
+        if( window.scrollY >= window.pageYOffset + content_list[0].getBoundingClientRect().top - tab.offsetHeight - 1){
             tab_list[1].classList.remove('on');
             tab_list[2].classList.remove('on');
             tab_list[0].classList.add('on');
@@ -64,12 +60,12 @@ window.addEventListener('scroll', function(){
             // bottom_btn[1].classList.remove('fixed_on');
             fixed_btn_bg.classList.remove('fixed_on');
         }
-        if(window.scrollY >= window.pageYOffset + content_list[1].getBoundingClientRect().top - tab.offsetHeight){
+        if(window.scrollY >= window.pageYOffset + content_list[1].getBoundingClientRect().top - tab.offsetHeight - 1){
             tab_list[0].classList.remove('on');
             tab_list[2].classList.remove('on');
             tab_list[1].classList.add('on');
         }
-        if(window.scrollY >= window.pageYOffset + content_list[2].getBoundingClientRect().top - tab.offsetHeight){
+        if(window.scrollY >= window.pageYOffset + content_list[2].getBoundingClientRect().top - tab.offsetHeight - 1){
             tab_list[0].classList.remove('on');
             tab_list[1].classList.remove('on');
             tab_list[2].classList.add('on');

@@ -23,9 +23,28 @@ fixed_top.addEventListener('click',function(e){
     window.scrollTo({top : 0, behavior: 'smooth'});
 });
 
+
+
+
+window.addEventListener('scroll', function(){
+    console.log(this.scrollY)
+})
+
+const visual_top = document.querySelector('.visual').offsetHeight + tab_wrap.offsetHeight + 'px';
+
+console.log(window.pageYOffset + content_list[0].getBoundingClientRect().top);
+console.log(window.pageYOffset + content_list[1].getBoundingClientRect().top);
+console.log(window.pageYOffset + content_list[2].getBoundingClientRect().top);
+
+// console.log(content_list[0].offsetTop);
+// console.log(content_list[1].getBoundingClientRect().top);
+// console.log(content_list[2].getBoundingClientRect().top);
+
 for(let i = 0; i< tab_list.length; i++){
 
-    const contentScrollTop = content_list[i].offsetTop - tab_wrap.offsetHeight;
+    const contentScrollTop = window.pageYOffset + content_list[i].getBoundingClientRect().top - tab_wrap.offsetHeight;
+
+
 
     tab_list[i].addEventListener('click',function(){
         window.scrollTo({top:contentScrollTop, behavior: 'smooth'});  
@@ -57,44 +76,44 @@ window.addEventListener('scroll', function(){
         }
     });
 
-                // 스와이퍼 탭
-                for(let i =0; i < sub_tab_list.length; i++){
+    // 스와이퍼 탭
+    for(let i =0; i < sub_tab_list.length; i++){
 
-                    sub_tab_list[i].addEventListener('click',function(){
-                        
-                        for(let j = 0; j < sub_tab_list.length; j++){
-                            sub_tab_list[j].classList.remove('sub_tab_list_on');
-                            swiper_content[j].classList.remove('swiper_show');
-                        }
-                        sub_tab_list[i].classList.add('sub_tab_list_on');
-                        swiper_content[i].classList.add('swiper_show'); 
-                    })
-                }
+        sub_tab_list[i].addEventListener('click',function(){
+            
+            for(let j = 0; j < sub_tab_list.length; j++){
+                sub_tab_list[j].classList.remove('sub_tab_list_on');
+                swiper_content[j].classList.remove('swiper_show');
+            }
+            sub_tab_list[i].classList.add('sub_tab_list_on');
+            swiper_content[i].classList.add('swiper_show'); 
+        })
+    }
     
     
     
-                // 아코디언
-                for(let i = 0; i < accordion.length; i++){
-                    
-                    accordion[i].addEventListener('click',function(){
-    
-                        accordion[i].classList.toggle('accordion_on');
-                        stroke[i].classList.add('stroke_on');
-    
-                        if(accordion[i].classList.contains('accordion_on')){
-                            arrow_up[i].style.display = 'block';
-                            arrow_down[i].style.display = 'none';
-                        }else{
-                            arrow_up[i].style.display = 'none';
-                            arrow_down[i].style.display = 'block';
-    
-                            setTimeout(function(){
-                                stroke[i].classList.remove('stroke_on');
-                            },400)
-                            
-                            
-                        }
-    
-                    });
-    
-                }
+    // 아코디언
+    for(let i = 0; i < accordion.length; i++){
+        
+        accordion[i].addEventListener('click',function(){
+
+            accordion[i].classList.toggle('accordion_on');
+            stroke[i].classList.add('stroke_on');
+
+            if(accordion[i].classList.contains('accordion_on')){
+                arrow_up[i].style.display = 'block';
+                arrow_down[i].style.display = 'none';
+            }else{
+                arrow_up[i].style.display = 'none';
+                arrow_down[i].style.display = 'block';
+
+                setTimeout(function(){
+                    stroke[i].classList.remove('stroke_on');
+                },400)
+                
+                
+            }
+
+        });
+
+    }

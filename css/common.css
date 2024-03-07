@@ -24,7 +24,7 @@ input, textarea {appearance: none;-webkit-appearance: none;-webkit-border-radius
   
 
 /* font-face Pretendard src(경로 변경) */
-@font-face {
+/* @font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
     font-weight: 300;
@@ -43,7 +43,7 @@ input, textarea {appearance: none;-webkit-appearance: none;-webkit-border-radius
     font-family: 'Pretendard-Regular';
     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
     font-weight: 700;
-}
+} */
 
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 

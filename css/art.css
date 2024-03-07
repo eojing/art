@@ -47,7 +47,7 @@ table tr:last-child td{border-bottom: none;}
 
 /* step > dot */
 .dot{position: relative; padding-left: 5.2778vw;}
-.dot::before{display: block; content: ''; width: 0.8333vw; height: 0.8333vw; background: #333; position: absolute; top: 22%; left: 3%; border-radius: 50%;}
+.dot::before{display: block; content: ''; width: 0.8333vw; height: 0.8333vw; background: #666; position: absolute; top: 22%; left: 3%; border-radius: 50%;}
 .dot:last-child:before{top: 40%;}
 
 /* sub_tab */
@@ -82,7 +82,7 @@ table tr:last-child td{border-bottom: none;}
 .accordion li.accordion_on{max-height: 100vh;}
 .accordion .title{display: flex; justify-content: space-between; align-items: center;}
 .arrow{max-width: 4.4444vw; width: 100%;}
-.accordion li .title_text{margin-right: auto;}
+.accordion li .title_text{max-width: 67.2222vw; width: 100%; margin-right: auto;}
 .accordion .twoLine{max-height: 22.2222vw;}
 .stroke{width: 100%; height: 0.2778vw; margin: 4.4444vw 0; background: #fff;}
 .stroke_on{background: #F0F0F0;}
@@ -93,6 +93,7 @@ table tr:last-child td{border-bottom: none;}
 /* btn */
 .btn_meta{background: #fff; text-decoration: none; position: absolute; left: 50%;transform: translateX(-50%); max-width: 63.3333vw; width: 100%; top: 71.5%; display: block; text-align: center; border-radius: 2.7778vw; padding: 2.7778vw 0; color: #000;}
 .btn_main{max-width: 88.8889vw; width: 100%; position: absolute; border-radius: 3.3333vw; bottom: 6%; left: 50%; transform: translateX(-50%); background: #16171B; padding: 3.6111vw 0;}
+.btn_main_fixed{bottom: 5.5556vw;}
 
 /* fixed_btn */
 .fixed_btn{position: fixed; bottom: 5.5556vw; z-index: 100; transition: all 0.2s ease-in; opacity: 0; pointer-events: none;}
@@ -123,7 +124,6 @@ table tr:last-child td{border-bottom: none;}
 .container {position: relative;}
 .container:nth-child(1)
 .content_img{padding: 8.3333vw 5.5556vw 2.7778vw;}
-.container:last-child{margin-bottom: 6.6667vw;}
 .winner_list.type2{position: inherit; display: flex; justify-content: space-between; bottom: 0; left: 0; transform: translateX(0); max-width: 88.8889vw;}
 .list_wrap{margin: 0 5.5556vw;}
 .sb{display: flex; justify-content: space-between; max-width: 40.2778vw; width: 100%; margin-bottom: 2.7778vw;}

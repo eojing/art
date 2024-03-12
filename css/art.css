@@ -98,8 +98,8 @@ table tr:last-child td{border-bottom: none;}
 
 /* fixed_btn */
 .fixed_btn{position: fixed; bottom: 5.5556vw; z-index: 100; transition: all 0.2s ease-in; opacity: 0; pointer-events: none;}
-.fixed_btn_bg{position: fixed;bottom: 0; opacity: 0; z-index: 100;transition: all 0.2s ease-in;width: 100%;height: 27.7778vw;background: linear-gradient(to top, rgba(255, 255, 255, 1)50%, rgba(255, 255, 255, 0)100%);}
-.fixed_top{bottom: 27.7778vw; right: 2.7778vw; max-width: 15.0000vw;}
+.fixed_btn_bg{position: fixed;bottom: 10vw; opacity: 0; z-index: 10;transition: all 0.2s ease-in;width: 100%;height: 27.7778vw;background: linear-gradient(to top, rgba(255, 255, 255, 1)50%, rgba(255, 255, 255, 0)100%);}
+.fixed_top{bottom: 37.7778vw; right: 2.7778vw; max-width: 15.0000vw;}
 .fixed_on{opacity: 100; pointer-events: all;}
 
 
@@ -133,3 +133,34 @@ table tr:last-child td{border-bottom: none;}
 .sb p:last-child{font-weight: bold;}
 
 .decoration_result{width: 11.6667vw;position: absolute;bottom: 24%;right: 8%;}
+
+
+
+/* 03.12 메인 하단 팝업 추가 */
+.popup_btn{display: flex; position: fixed; align-items: center; justify-content: space-between; bottom: 0; left: 0; z-index: 100; height: 10vw; width: 100%; background: #f9f9f9; padding: 2.2222vw 5.5556vw;}
+.popup_arrow{max-width: 4.4444vw;}
+.popup_icon{max-width: 3.8889vw; margin-right: 1.1111vw;}
+.flex_left{display: flex; align-items: center;}
+.btn_okay{width: 100%; padding: 3.3333vw 0;}
+
+.popup_wrap{z-index: 100; top: 200%;  height: 100%; margin-top: 13.8889vw;}
+.popup_wrap_on{top: 100%; }
+
+.popup_dot{position: relative; padding-left: 2.2222vw;}
+.popup_dot::before{display: block; content: ''; width: 0.5556vw; height: 0.5556vw; background: #666; position: absolute; top: 2.2vw; left: 1%; border-radius: 50%;}
+.popup_text h3{padding: 7.2222vw 4.4444vw 5.5556vw; display: block;}
+.popup_content{padding: 8.3333vw 5.5556vw 11.1111vw; height: 100%; overflow-y: scroll;}
+.popup_back{z-index: 11 ;}
+.popup_stroke{margin: 0 5.5556vw; height: 0.2778vw; background: #e0e0e0;}
+
+.scroll_lock{touch-action: none; overflow: hidden;}
+
+/* @media (min-width : 768px) {
+    .popup_content{max-height: 81.4444vw;}
+    .popup_wrap{max-height: 115.3333vw;}
+}
+
+@media (max-width : 376px) {
+    .popup_content{max-height: 131.4444vw;}
+    .popup_wrap{max-height: 165.3333vw;}
+} */

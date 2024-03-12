@@ -3,11 +3,6 @@
             const sub_tab_wrap = document.querySelector('.sub_tab_wrap');
             const sub_tab_list = document.querySelectorAll('.sub_tab_list');
             const swiper_content = document.querySelectorAll('.swiper');
-            const accordion = document.querySelectorAll('.accordion li');
-            const stroke = document.querySelectorAll('.stroke');
-            const bottom_btn = document.querySelector('.fixed_btn');
-
-
 
 
 
@@ -30,23 +25,3 @@
 
 
 
-            // 아코디언
-            for(let i = 0; i < accordion.length; i++){
-                
-                accordion[i].addEventListener('click',function(){
-
-                    accordion[i].classList.toggle('accordion_on');
-                    stroke[i].classList.add('stroke_on');
-
-                    if(accordion[i].classList.contains('accordion_on')){
-                    }else{
-                        setTimeout(function(){
-                            stroke[i].classList.remove('stroke_on');
-                        },400)
-                        
-                        
-                    }
-
-                });
-
-            }

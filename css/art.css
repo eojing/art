@@ -19,7 +19,7 @@ html, body{font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkM
 
 /* content */
 .content_sub_visual_text{padding: 41.9444vw 4.4444vw 8.0556vw 5.5556vw;}
-.content_list_bg{background: #F2F6FA; padding: 8.3333vw 5.5556vw 27.7778vw; margin-bottom: 0;}
+.content_list_bg{background: #F2F6FA; padding: 8.3333vw 5.5556vw 36.1111vw; margin-bottom: 0;}
 
 .content_area{padding: 0 5.5556vw;}
 .tag{background: #FDF6D9; padding: 1.1111vw 4.4444vw; border-radius: 27.5000vw; display: inline-block;}
@@ -155,12 +155,8 @@ table tr:last-child td{border-bottom: none;}
 
 .scroll_lock{touch-action: none; overflow: hidden;}
 
-/* @media (min-width : 768px) {
-    .popup_content{max-height: 81.4444vw;}
-    .popup_wrap{max-height: 115.3333vw;}
-}
 
-@media (max-width : 376px) {
-    .popup_content{max-height: 131.4444vw;}
-    .popup_wrap{max-height: 165.3333vw;}
-} */
+
+/* 0313 작품접수버튼 접수기간 이전, 접수마감 */
+.btn_main_before{background : #fdf0c6; color: #333;}
+.btn_main_end{background: #F3ECD0; color: #c5c5c5;}

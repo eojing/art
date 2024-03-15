@@ -62,7 +62,7 @@ table tr:last-child td{border-bottom: none;}
 .swiper-text{text-align: center;}
 .swiper-pagination{height: 1.6667vw; display: flex; justify-content: center;}
 .swiper-pagination-bullet{width: 1.6667vw;height: 1.6667vw;background: #B6B7B8; border-radius: 50%; display: flex;}
-.swiper-pagination-bullet-active{background: #2C363B;width: 3.3333vw;}
+.swiper-pagination-bullet-active{background: #2C363B;width: 3.3333vw; border-radius: 4.1667vw;}
 .swiper_show{display: block;}
 .decoration{width: 11.6667vw;position: absolute;bottom: 17%;right: 9%;}
 .decoration img{filter: drop-shadow(0.5556vw 2.7778vw 2.7778vw rgb(0, 0, 0, 0.2));}

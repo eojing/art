@@ -60,8 +60,8 @@ table tr:last-child td{border-bottom: none;}
 .swiper{display: none;position: relative;}
 .swiper-slide{width: 88.8889vw;margin: 0 auto;}
 .swiper-text{text-align: center;}
-.swiper-pagination{height: 1.6667vw;}
-.swiper-pagination-bullet{width: 1.6667vw;height: 1.6667vw;background: #B6B7B8;}
+.swiper-pagination{height: 1.6667vw; display: flex; justify-content: center;}
+.swiper-pagination-bullet{width: 1.6667vw;height: 1.6667vw;background: #B6B7B8; border-radius: 50%; display: flex;}
 .swiper-pagination-bullet-active{background: #2C363B;width: 3.3333vw;}
 .swiper_show{display: block;}
 .decoration{width: 11.6667vw;position: absolute;bottom: 17%;right: 9%;}

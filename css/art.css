@@ -43,7 +43,7 @@ table tr:last-child td{border-bottom: none;}
 
 /* step */
 .step_wrap{display: flex;}
-.step{display: inline-block;font-weight: bold; border: 0.2778vw solid #333;border-radius: 27.7778vw;max-height: 5.8333vw;max-width: 14.4444vw;width: 100%;text-align: center; padding: 0.5556vw 0;}
+.step{display: inline-block;font-weight: bold; border: 0.2778vw solid #333;border-radius: 27.7778vw;max-height: 5.8333vw;max-width: 14.4444vw;width: 100%;text-align: center; padding: 0.8333vw 0 1.1111vw; line-height: normal;}
 
 /* step > dot */
 .dot{position: relative; padding-left: 5.2778vw;}

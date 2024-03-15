@@ -60,7 +60,7 @@ table tr:last-child td{border-bottom: none;}
 .swiper{display: none;position: relative;}
 .swiper-slide{width: 88.8889vw;margin: 0 auto;}
 .swiper-text{text-align: center;}
-.swiper-pagination{padding : 5.5556vw 0 8.3333vw;}
+.swiper-pagination{height: 1.6667vw;}
 .swiper-pagination-bullet{width: 1.6667vw;height: 1.6667vw;background: #B6B7B8;}
 .swiper-pagination-bullet-active{background: #2C363B;width: 3.3333vw;}
 .swiper_show{display: block;}
@@ -92,7 +92,7 @@ table tr:last-child td{border-bottom: none;}
 
 
 /* btn */
-.btn_meta{background: #fff; text-decoration: none; position: absolute; left: 50%;transform: translateX(-50%); max-width: 63.3333vw; width: 100%; top: 71.5%; display: block; text-align: center; border-radius: 2.7778vw; padding: 2.7778vw 0; color: #000;}
+.btn_meta{background: #fff; text-decoration: none; position: absolute; left: 50%;transform: translateX(-50%); top: 88.5%; display: block; text-align: center; border-radius: 2.7778vw; color: #000;}
 .btn_main{max-width: 88.8889vw; width: 100%; position: absolute; border-radius: 3.3333vw; bottom: 6%; left: 50%; transform: translateX(-50%); background: #16171B; padding: 3.6111vw 0;}
 .btn_main_fixed{bottom: 5.5556vw;}
 
@@ -160,3 +160,6 @@ table tr:last-child td{border-bottom: none;}
 /* 0313 작품접수버튼 접수기간 이전, 접수마감 */
 .btn_main_before{background : #fdf0c6; color: #333;}
 .btn_main_end{background: #F3ECD0; color: #c5c5c5;}
+
+.btn_r{max-width: 4.4444vw; width: 100%;}
+.meta_content{display: flex; justify-content: center;}
